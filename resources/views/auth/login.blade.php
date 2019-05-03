@@ -4,7 +4,7 @@
 
 <div class="login-box">
   <div class="login-logo">
-    <a href="/"><b>NDEBITECH</b>APP</a>
+    <a href="/"><b>JUNIORDESIGN</b>APP</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
