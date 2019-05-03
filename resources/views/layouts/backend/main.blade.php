@@ -44,7 +44,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; 2019 <a href="/">NDEBI TECH</a>.</strong> All rights
+    <strong>Copyright &copy; 2019 <a href="/">JUNIOR DESIGN</a>.</strong> All rights
     reserved.
   </footer>
 
