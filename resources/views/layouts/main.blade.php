@@ -14,7 +14,7 @@
     <header>
 
         <nav class="navbar container-fluid navbar-expand-lg bg-transparent">
-            <a class="navbar-brand" href="/">NDEBI TECH</a>
+            <a class="navbar-brand" href="/">JUNIOR DESIGN</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class=""> <i class="fa fa-bars" aria-hidden="true"></i> </span>
             </button>
