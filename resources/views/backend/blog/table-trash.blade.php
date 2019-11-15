@@ -1,14 +1,4 @@
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <td width="80">Action</td>
-            <td>Title</td>
-            <td width="120">Author</td>
-            <td width="150">Category</td>
-            <td width="170">Date</td>
-        </tr>
-    </thead>
-    <tbody>
+
         <?php $request = request(); ?>
 
         @foreach($posts as $post)
@@ -18,11 +8,11 @@
                     {!! Form::open(['style' => 'display:inline-block;', 'method' => 'PUT', 'route' => ['backend.blog.restore', $post->id]]) !!}
                         @if (check_user_permissions($request, "Blog@restore", $post->id))
                             <button title="Restore" class="btn btn-xs btn-default">
-                                <i class="fa fa-refresh"></i>
+                                <i class="fa fa-recycle"></i>
                             </button>
                         @else
                             <button title="Restore" onclick="return false;" class="btn btn-xs btn-default disabled">
-                                <i class="fa fa-refresh"></i>
+                                <i class="fa fa-recycle"></i>
                             </button>
                         @endif
                     {!! Form::close() !!}
@@ -48,5 +38,4 @@
             </tr>
 
         @endforeach
-    </tbody>
-</table>
+

@@ -1,35 +1,42 @@
 @extends('layouts.backend.main')
 
-@section('title', 'MyBlog | Blog index')
+@section('title', 'Ndebitech Dashboard | Blog index')
 
 @section('content')
 
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1>
-          Blog
-          <small>Display All blog posts</small>
-        </h1>
-        <ol class="breadcrumb">
-          <li>
-              <a href="{{ url('/home') }}"><i class="fa fa-dashboard"></i> Dashboard</a>
-          </li>
-          <li><a href="{{ route('backend.blog.index') }}">Blog</a></li>
-          <li class="active">All Posts</li>
-        </ol>
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Posts</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="/home"><i class="nav-icon fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li class="breadcrumb-item active">Blog</li>
+              </ol>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
       </section>
+  
 
       <!-- Main content -->
       <section class="content">
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="box">
-                <div class="box-header clearfix">
-                    <div class="pull-left">
-                        <a href="{{ route('backend.blog.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Add New</a>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                    <h3 class="card-title mb-2">Blog</h3>
+                </div>
+                <div class="clearfix"></div>
+                <div class="row d-flex justify-content-between">
+                    <div class="mr-auto">
+                        <a href="{{ route('backend.blog.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add New</a>
                     </div>
-                    <div class="pull-right" style="padding:7px 0;">
+                    <div class="ml-auto" style="padding:7px 0;">
                         <?php $links = [] ?>
                         @foreach($statusList as $key => $value)
                             @if($value)
@@ -40,10 +47,21 @@
                         {!! implode(' | ', $links) !!}
                     </div>
                 </div>
-                <!-- /.box-header -->
-                <div class="box-body ">
-                    @include('backend.partials.message')
-
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                @include('backend.partials.message')
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <td width="80">Action</td>
+                            <td>Title</td>
+                            <td width="120">Author</td>
+                            <td width="150">Category</td>
+                            <td width="170">Date</td>
+                        </tr>
+                    </thead>
+                  <tbody>
                     @if (! $posts->count())
                         <div class="alert alert-danger">
                             <strong>No record found</strong>
@@ -55,29 +73,46 @@
                             @include('backend.blog.table')
                         @endif
                     @endif
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer clearfix">
-                    <div class="pull-left">
-                        {{ $posts->appends( Request::query() )->render() }}
-                    </div>
-                    <div class="pull-right">
-                        <small>{{ $postCount }} {{ str_plural('Item', $postCount) }}</small>
-                    </div>
-                </div>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                        <td width="80">Action</td>
+                        <td>Title</td>
+                        <td width="120">Author</td>
+                        <td width="150">Category</td>
+                        <td width="170">Date</td>
+                    </tr>
+                  </tfoot>
+                </table>
               </div>
-              <!-- /.box -->
+              <!-- /.card-body -->
+              <div class="card card-footer">
+                    <div class="box-footer clearfix">
+                        <div class="pull-left">
+                            {{ $posts->appends( Request::query() )->render() }}
+                        </div>
+                        <div class="pull-right">
+                            <small>{{ $postCount }} {{ str_plural('Item', $postCount) }}</small>
+                        </div>
+                    </div>
+              </div>
             </div>
+            <!-- /.card -->
           </div>
-        <!-- ./row -->
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
       </section>
       <!-- /.content -->
-    </div>
+  
+  
+
 
 @endsection
-
 @section('script')
     <script type="text/javascript">
         $('ul.pagination').addClass('no-margin pagination-sm');
     </script>
 @endsection
+
+

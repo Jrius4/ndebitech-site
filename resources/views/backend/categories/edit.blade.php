@@ -1,28 +1,43 @@
 @extends('layouts.backend.main')
 
-@section('title', 'MyBlog | Edit category')
+@section('title', 'Ndebitech Dashboard | Edit category')
 
 @section('content')
 
-    <div class="content-wrapper">
+
+      
+
       <!-- Content Header (Page header) -->
       <section class="content-header">
-        <h1>
-          Categories
-          <small>Edit category</small>
-        </h1>
-        <ol class="breadcrumb">
-          <li>
-              <a href="{{ url('/home') }}"><i class="fa fa-dashboard"></i> Dashboard</a>
-          </li>
-          <li><a href="{{ route('backend.categories.index') }}">Categories</a></li>
-          <li class="active">Edit Category</li>
-        </ol>
-      </section>
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1><h1>
+                    Categories
+                    <small>Edit category</small></h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="{{ url('/home') }}"><i class="nav-icon fas fa-tachometer-alt"></i> Dashboard</a></li>
+                  <li class="breadcrumb-item"><a href="{{ route('backend.categories.index') }}">Categories</a></li>
+                  <li class="breadcrumb-item active">Edit Category</li>
+                </ol>
+              </div>
+            </div>
+          </div><!-- /.container-fluid -->
+        </section>
+        
 
       <!-- Main content -->
       <section class="content">
-          <div class="row">
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card card-primary shadow-sm p-2">
+                    <div class="card-title">
+                      <h3>Edit Category</h3>
+                    </div>
+                  </div>
               {!! Form::model($category, [
                   'method' => 'PUT',
                   'route'  => ['backend.categories.update', $category->id],
@@ -30,14 +45,18 @@
                   'id' => 'post-form'
               ]) !!}
 
-              @include('backend.categories.form')
+              <div class="row d-flex justify-content-between">
+                @include('backend.categories.form')
+              </div> 
 
             {!! Form::close() !!}
           </div>
-        <!-- ./row -->
-      </section>
-      <!-- /.content -->
+        </div>
+      </div>
+      <!-- ./row -->
     </div>
+  </section>
+      <!-- /.content -->
 
 @endsection
 

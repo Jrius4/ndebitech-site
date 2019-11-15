@@ -1,14 +1,4 @@
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <td width="80">Action</td>
-            <td>Title</td>
-            <td width="120">Author</td>
-            <td width="150">Category</td>
-            <td width="170">Date</td>
-        </tr>
-    </thead>
-    <tbody>
+
         <?php $request = request(); ?>
 
         @foreach($posts as $post)
@@ -47,5 +37,5 @@
             </tr>
 
         @endforeach
-    </tbody>
-</table>
+
+

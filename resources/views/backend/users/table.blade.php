@@ -1,13 +1,4 @@
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <td width="80">Action</td>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Role</td>
-        </tr>
-    </thead>
-    <tbody>
+
         <?php $currentUser = auth()->user(); ?>
         @foreach($users as $user)
 
@@ -32,5 +23,4 @@
             </tr>
 
         @endforeach
-    </tbody>
-</table>
+

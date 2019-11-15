@@ -4,38 +4,50 @@
 
 @section('content')
 
-    <div class="content-wrapper">
       <!-- Content Header (Page header) -->
+     
       <section class="content-header">
-        <h1>
-          Categories
-          <small>Display All categories</small>
-        </h1>
-        <ol class="breadcrumb">
-          <li>
-              <a href="{{ url('/home') }}"><i class="fa fa-dashboard"></i> Dashboard</a>
-          </li>
-          <li><a href="{{ route('backend.categories.index') }}">Categories</a></li>
-          <li class="active">All categories</li>
-        </ol>
-      </section>
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Categories
+                    <small> Display All categories</small></h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="/home"><i class="nav-icon fas fa-tachometer-alt"></i> Dashboard</a></li>
+                  {{-- <li class="breadcrumb-item"><a href="{{ route('backend.users.index') }}"><i class="nav-icon fas fa-users"></i> Users</a></li> --}}
+                  <li class="breadcrumb-item active">All categories</li>
+                </ol>
+              </div>
+            </div>
+          </div><!-- /.container-fluid -->
+        </section>
 
       <!-- Main content -->
       <section class="content">
           <div class="row">
-            <div class="col-xs-12">
-              <div class="box">
-                <div class="box-header clearfix">
-                    <div class="pull-left">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header clearfix">
+                    <div class="mr-auto">
                         <a href="{{ route('backend.categories.create') }}" class="btn btn-success"><i class="fa fa-plus"></i> Add New</a>
                     </div>
-                    <div class="pull-right">
+                    <div class="ml-auto">
                     </div>
                 </div>
                 <!-- /.box-header -->
-                <div class="box-body ">
+                <div class="card-body ">
                     @include('backend.partials.message')
-
+                    <table id="example1" class="table table-bordered table-striped">
+                          <thead>
+                              <tr>
+                                  <td width="80">Action</td>
+                                  <td>Category Name</td>
+                                  <td width="120">Post Count</td>
+                              </tr>
+                          </thead>
+                        <tbody>
                     @if (! $categories->count())
                         <div class="alert alert-danger">
                             <strong>No record found</strong>
@@ -43,13 +55,22 @@
                     @else
                         @include('backend.categories.table')
                     @endif
-                </div>
+                  </tbody>
+                  <tfoot>
+                      <tr>
+                          <td width="80">Action</td>
+                          <td>Category Name</td>
+                          <td width="120">Post Count</td>
+                      </tr>
+                  </tfoot>
+                </table>
+              </div>
                 <!-- /.box-body -->
-                <div class="box-footer clearfix">
-                    <div class="pull-left">
+                <div class="card-footer clearfix">
+                    <div class="mr-auto">
                         {{ $categories->appends( Request::query() )->render() }}
                     </div>
-                    <div class="pull-right">
+                    <div class="ml-auto">
                         <small>{{ $categoriesCount }} {{ str_plural('Item', $categoriesCount) }}</small>
                     </div>
                 </div>
@@ -60,7 +81,7 @@
         <!-- ./row -->
       </section>
       <!-- /.content -->
-    </div>
+ 
 
 @endsection
 

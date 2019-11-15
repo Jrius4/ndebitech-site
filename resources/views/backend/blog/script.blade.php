@@ -29,8 +29,18 @@
             slugInput.val(theSlug);
         });
 
-        var simplemde1 = new SimpleMDE({ element: $("#excerpt")[0] });
-        var simplemde2 = new SimpleMDE({ element: $("#body")[0] });
+        // var simplemde1 = new SimpleMDE({ element: $("#excerpt")[0] });
+        // var simplemde2 = new SimpleMDE({ element: $("#body")[0] });
+
+    $(function () {
+        // Summernote
+        $('#excerpt').summernote();
+    })
+
+    $(function () {
+        // Summernote
+        $('#body').summernote();
+    })
 
         $('#datetimepicker1').datetimepicker({
             format: 'YYYY-MM-DD HH:mm:ss',
@@ -41,9 +51,11 @@
             console.log(e);
         });
 
+       
+
         $('#draft-btn').click(function(e) {
             e.preventDefault();
-            $('#published_at').val("");
+            $('#published_at').val('{{date("Y-m-d H:i:s")}}');
             $('#post-form').submit();
         });
     </script>

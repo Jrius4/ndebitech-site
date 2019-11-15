@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
                 [
                     'name' => "Kazibwe Julius Junior",
                     'slug' => 'kazibwe-julius-junior',
-                    'email' => "kazibwejuliusjunior.com",
+                    'email' => "kazibwejuliusjunior@gmail.com",
                     'password' => bcrypt('admins3cret'),
                     'bio' => $faker->text(rand(250, 300))
                 ],
@@ -48,10 +48,10 @@ class UsersTableSeeder extends Seeder
         {
             DB::table('users')->insert([
                 [
-                    'name' => "Administrator",
+                    'name' => "administrator",
                     'slug' => 'admin',
-                    'email' => "admin@test.com",
-                    'password' => bcrypt('admin'),
+                    'email' => "kazibwejuliusjunior@gmail.com",
+                    'password' => bcrypt('admins3cret'),
                     'bio' => "I'm an Administrator"
                 ]
             ]);

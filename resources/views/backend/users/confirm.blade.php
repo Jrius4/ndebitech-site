@@ -4,21 +4,28 @@
 
 @section('content')
 
-    <div class="content-wrapper">
+
       <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1>
-          Users
-          <small>Delete Confirmation</small>
-        </h1>
-        <ol class="breadcrumb">
-          <li>
-              <a href="{{ url('/home') }}"><i class="fa fa-dashboard"></i> Dashboard</a>
-          </li>
-          <li><a href="{{ route('backend.users.index') }}">Users</a></li>
-          <li class="active">Delete Confirmation</li>
-        </ol>
-      </section>
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1><h1>
+                            Users
+                            <small>Delete Confirmation</small></h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{ url('/home') }}"><i class="nav-icon fas fa-tachometer-alt"></i> Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('backend.users.index') }}">Users</a></li>
+                        <li class="breadcrumb-item active">Delete Confirmation</li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+          
+  
 
       <!-- Main content -->
       <section class="content">
@@ -29,8 +36,8 @@
               ]) !!}
 
               <div class="col-xs-9">
-                  <div class="box">
-                      <div class="box-body ">
+                  <div class="card">
+                      <div class="card-body ">
                           <p>
                               You have specified this user for deletion:
                           </p>
@@ -50,7 +57,7 @@
                           </p>
 
                       </div>
-                      <div class="box-footer">
+                      <div class="card-footer">
                           <button type="submit" class="btn btn-danger">Confirm Deletion</button>
                           <a href="{{ route('backend.users.index') }}" class="btn btn-default">Cancel</a>
                       </div>
@@ -62,6 +69,6 @@
         <!-- ./row -->
       </section>
       <!-- /.content -->
-    </div>
+
 
 @endsection

@@ -1,6 +1,6 @@
 <div class="col-xs-9">
-  <div class="box">
-    <div class="box-body ">
+  <div class="card">
+    <div class="card-body ">
 
         <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
             {!! Form::label('name') !!}
@@ -65,7 +65,7 @@
         </div>
     </div>
     <!-- /.box-body -->
-    <div class="box-footer">
+    <div class="card-footer">
         <button type="submit" class="btn btn-primary">{{ $user->exists ? 'Update' : 'Save' }}</button>
         <a href="{{ route('backend.users.index') }}" class="btn btn-default">Cancel</a>
     </div>

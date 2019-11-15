@@ -1,12 +1,4 @@
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <td width="80">Action</td>
-            <td>Category Name</td>
-            <td width="120">Post Count</td>
-        </tr>
-    </thead>
-    <tbody>
+
         @foreach($categories as $category)
 
             <tr>
@@ -31,5 +23,4 @@
             </tr>
 
         @endforeach
-    </tbody>
-</table>
+
