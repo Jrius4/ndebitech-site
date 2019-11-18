@@ -25,7 +25,7 @@
           <nav class="navbar navbar-expand-lg px-lg-0 bg-light navbar-light">
             <div class="container position-relative">
               {{-- <!-- Navbar Brand--> --}}
-              <a href="index-2.html" class="navbar-brand"> <img width="35" height="35" src="{{asset('/img/logos/ndebi-tech-favi-blue.png')}}" alt="logo"></a>
+              <a href="{{url('/')}}" class="navbar-brand"> <img width="35" height="35" src="{{asset('/img/logos/ndebi-tech-favi-blue.png')}}" alt="logo"></a>
               {{-- <!-- Toggle Button--> --}}
               <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu <i class="fa fa-bars"></i></button>
               {{-- <!-- Navbar Menu--> --}}
