@@ -39,7 +39,7 @@
     </ul>
 </div>
       <div class="tab-content container" id="pills-tabContent">
-{{-- 
+
                 <div class="tab-pane fade show active" id="pills-{{$careers->first()->careerCategory->slug}}" role="tabpanel" aria-labelledby="pills-{{$careers->first()->careerCategory->slug}}-tab">
                             <div class="my-2">
                                 <h2>{{$careers->first()->careerCategory->title}}</h2>
@@ -72,7 +72,7 @@
 
                             @endif
                         @endforeach
-                </div> --}}
+                </div>
 
                     @foreach ($categories as $category)
 
