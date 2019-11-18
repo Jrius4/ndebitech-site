@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Career extends Model
+;class Career extends Model
 {
     use SoftDeletes;
     protected $fillable = ['title','slug','excerpt','body','image','career_category_id'];
@@ -35,7 +35,6 @@ class Career extends Model
         return $imageUrl;
     }
 
-
     public function getImageThumbUrlAttribute($value)
     {
         $imageUrl = "";
@@ -62,6 +61,6 @@ class Career extends Model
         return $this->body ? Markdown::convertToHtml(e($this->body)) : NULL;
     }
 
-    
+
 
 }

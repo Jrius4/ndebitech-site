@@ -116,7 +116,7 @@ class Post extends Model
     {
         $anchors = [];
         foreach($this->tags as $tag) {
-            $anchors[] = '<a href="' . route('tag', $tag->slug) . '">' . $tag->name . '</a>';
+            $anchors[] = '<a  style="text-decoration:none" href="' . route('tag', $tag->slug) . '">' . $tag->name . '</a>';
         }
         return implode(", ", $anchors);
     }

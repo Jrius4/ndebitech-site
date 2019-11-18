@@ -11,7 +11,7 @@ use App\Tag;
 
 class BlogController extends Controller
 {
-    protected $limit = 3;
+    protected $limit = 20;
 
     public function index()
     {
@@ -19,13 +19,15 @@ class BlogController extends Controller
                     ->latestFirst()
                     ->published()
                     ->filter(request()->only(['term', 'year', 'month']))
-                    ->simplePaginate($this->limit);
+                    ->paginate($this->limit);
+        $postCategories=Category::get();
 
-        return view("blog.index", compact('posts'));
+        return view("blog.index", compact('posts','postCategories'));
     }
 
     public function category(Category $category)
     {
+        $postCategories=Category::get();
         $categoryName = $category->title;
 
         $posts = $category->posts()
@@ -34,11 +36,12 @@ class BlogController extends Controller
                           ->published()
                           ->simplePaginate($this->limit);
 
-         return view("blog.index", compact('posts', 'categoryName'));
+         return view("blog.index", compact('posts', 'categoryName','postCategories'));
     }
 
     public function tag(Tag $tag)
     {
+        $postCategories=Category::get();
         $tagName = $tag->title;
 
         $posts = $tag->posts()
@@ -47,11 +50,12 @@ class BlogController extends Controller
                           ->published()
                           ->simplePaginate($this->limit);
 
-         return view("blog.index", compact('posts', 'tagName'));
+         return view("blog.index", compact('posts', 'tagName','postCategories'));
     }
 
     public function author(User $author)
     {
+        $postCategories=Category::get();
         $authorName = $author->name;
 
         $posts = $author->posts()
@@ -60,7 +64,7 @@ class BlogController extends Controller
                           ->published()
                           ->simplePaginate($this->limit);
 
-         return view("blog.index", compact('posts', 'authorName'));
+         return view("blog.index", compact('posts', 'authorName','postCategories'));
     }
 
     public function show(Post $post)

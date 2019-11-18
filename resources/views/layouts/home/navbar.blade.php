@@ -4,7 +4,7 @@
     <div class="top-bar d-none d-sm-block">
             <div class="container">
               <div class="row">
-                
+
                 <div class="ml-auto col-sm-3 col-md-3 text-right account-details">
                   <ul class="list-inline">
                     <li class="list-inline-item"> <a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -15,14 +15,14 @@
               </div>
             </div>
           </div>
-      
-      
-      
+
+
+
           {{-- <!-- Navbar --> --}}
-      
-      
-      
-          <nav class="navbar navbar-expand-lg px-lg-0">
+
+
+
+          <nav class="navbar navbar-expand-lg px-lg-0 bg-primary navbar-dark">
             <div class="container position-relative">
               {{-- <!-- Navbar Brand--> --}}
               <a href="index-2.html" class="navbar-brand"> <img width="35" height="35" src="{{asset('/img/logos/ndebi-tech-favi-blue.png')}}" alt="logo"></a>
@@ -34,6 +34,8 @@
                   <div class="nav-item dropdown active"><a id="navbarHome" data-target="#" href="index-2.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">Home<i class="fa fa-caret-down"></i></a>
                     <div aria-labelledby="navbarHome" class="dropdown-menu"><a href="index-2.html" class="dropdown-item">Homepage 1</a><a href="index2.html" class="dropdown-item">Homepage 2</a></div>
                   </div>
+                  <div class="nav-item"><a href="{{url('/processes')}}" class="nav-link">Processes</a></div>
+                <div class="nav-item"><a href="{{url('/careers')}}" class="nav-link">Careers</a></div>
                   <div class="nav-item dropdown"><a id="navbarCategory" data-target="#" href="index-2.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">Category<i class="fa fa-caret-down"></i></a>
                     <div aria-labelledby="navbarCategory" class="dropdown-menu"><a href="category.html" class="dropdown-item">Full width</a><a href="category-left.html" class="dropdown-item">Left sidebar</a><a href="category-right.html" class="dropdown-item">Right sidebar</a></div>
                   </div>
@@ -105,7 +107,7 @@
                       <div class="dropdown-submenu"><a id="navbarDropdownMenuLink2" href="http://example.com/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item">Multilevel dropdown<i class="fa fa-caret-down"></i></a>
                         <div aria-labelledby="navbarDropdownMenuLink2" class="dropdown-menu"><a href="#" class="dropdown-item">Action</a>
                           <div class="dropdown-submenu"><a id="navbarDropdownMenuLink3" href="http://example.com/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item">
-                               
+
                               Another action<i class="fa fa-caret-down"></i></a>
                             <div aria-labelledby="navbarDropdownMenuLink3" class="dropdown-menu"><a href="#" class="dropdown-item">Action</a><a href="#" class="dropdown-item">Action</a><a href="#" class="dropdown-item">Action</a><a href="#" class="dropdown-item">Action</a></div>
                           </div><a href="#" class="dropdown-item">Something else here</a>
@@ -114,18 +116,19 @@
                     </div>
                   </div>
                   {{-- <!-- Multi level dropdown end      --> --}}
+                <div class="nav-item"><a href="{{url('/blog')}}" class="nav-link">Blog</a></div>
+                <div class="nav-item"><a href="{{url('/careers')}}" class="nav-link">Careers</a></div>
                   <div class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></div>
                   <div class="nav-item">
                     <ul class="list-inline">
-                      <li class="list-inline-item"><a id="search" href="#" class="nav-link">
-                          <div class="icon search"><i class="icon-magnifying-glass"></i></div></a></li>
-                      <li class="list-inline-item"><a href="cart.html" class="nav-link">
-                          <div class="icon cart"><i class="icon-cart"></i></div><span class="d-md-none d-lg-inline"><span class="no">2</span>items</span></a></li>
+                    <li class="list-inline-item">
+                            <button type="button" class="btn btn-outline-secondary btn-unique bg-light">GEt A QUOTE</button>
+                    </li>
+
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
           </nav>
-      
-          
+

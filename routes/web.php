@@ -184,6 +184,14 @@ Route::delete('/backend/ndebi-tech-clients/force-destroy/{ndebi_tech_client}', [
 ]);
 // ./backend ndebi-tech-clients
 
+//web navigation
+//careers
+
+Route::resource('/careers', 'Home\CareerController',['only'=>['index','show','as'=>'careers']]);
+
+//processes
+Route::resource('/processes', 'Home\ProcessController',['only'=>['index','show','as'=>'processes']]);
+
 
 Route::get('/routes', function() {
     $routeCollection = Route::getRoutes();

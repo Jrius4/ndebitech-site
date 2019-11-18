@@ -12,14 +12,22 @@
 <link rel="stylesheet" href="{{asset('/assets/css/owl.theme.default.min.css')}}">
 <link rel="stylesheet" href="{{asset('/assets/css/style.blue.css')}}">
 <link rel="stylesheet" href="{{asset('/assets/css/custom.css')}}">
+<link rel="stylesheet" href="{{asset('/css/custom.css')}}">
 <link rel="shortcut icon" href="{{asset('/img/logos/ndebi-tech-favi-blue.png')}}" type="image/x-icon">
     <title>Ndebi tech</title>
 </head>
-<body>
+<body class="">
+
+
     @include('layouts.home.navbar')
 
-        @yield('content')
+       <section class="pt-0 mt-0">
+            @yield('content')
+       </section>
 
+
+    {{-- <div style="min-height:300px;"></div> --}}
+    <div class="clearfix"></div>
     @include('layouts.home.footer')
 
 
@@ -31,6 +39,6 @@
     <script src="{{asset('/assets/js/owl.carousel2.thumbs.min.js')}}"></script>
     <script src="{{asset('/assets/js/jquery.validate.min.js')}}"></script>
     <script src="{{asset('/assets/js/front.js')}}"></script>
-    
+
 </body>
 </html>

@@ -1,10 +1,10 @@
-<div class="col-md-4">
+<div class="col-md-3">
     <aside class="right-sidebar">
         <div class="search-widget">
             <form action="{{ route('blog') }}">
                 <div class="input-group">
                   <input type="text" class="form-control input-lg" value="{{ request('term') }}" name="term" placeholder="Search for...">
-                  <span class="input-group-btn">
+                  <span class="input-group-append">
                     <button class="btn btn-md btn-default" type="submit">
                         <i class="fa fa-search"></i>
                     </button>
@@ -38,9 +38,9 @@
                     @foreach ($popularPosts as $post)
                         <li>
                             @if ($post->image_thumb_url)
-                                <div class="post-image">
+                                <div class="post-image figure">
                                     <a href="{{ route('blog.show', $post->slug) }}">
-                                        <img src="{{ $post->image_thumb_url }}" />
+                                        <img class="figure-img img-fluid rounded" src="{{ $post->image_thumb_url }}" />
                                     </a>
                                 </div>
                             @endif

@@ -1,14 +1,31 @@
-@extends('layouts.main')
+@extends('layouts.home.main')
 
 @section('content')
 
+<header class="mt-0 pt-0" style="margin-top:-200px">
+        <div style="background:{{false?null:'radial-gradient(circle, rgba(28,41,223,0.8799719716988358) 0%, rgba(5,96,203,1) 100%);'}} min-height:250px;min-width:100%;margin-top:-20px">
+                <img src="" alt="">
+                <div class="row d-flex justify-content-center">
+                        <div class=" col-md-6 text-light align-self-baseline py-2">
+
+                            <h2>{{ $post->title }}</h2>
+                        </div>
+                </div>
+            </div>
+        </header>
+        <div class="container my-3">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item text-uppercase"> <a href="{{url('/')}}" class="text-primary">Home</a></li>
+              <li class="breadcrumb-item active text-uppercase"><a href="{{url('/blog')}}" class="text-primary">Blog</a></li>
+            </ol>
+        </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8">
                 <article class="post-item post-detail">
                     @if ($post->image_url)
-                        <div class="post-item-image">
-                            <img src="{{ $post->image_url }}" alt="{{ $post->title }}">
+                        <div class="post-item-image figure">
+                            <img class="figure-img img-fluid rounded" src="{{ $post->image_url }}" alt="{{ $post->title }}">
                         </div>
                     @endif
 
