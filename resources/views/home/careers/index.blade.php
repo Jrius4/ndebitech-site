@@ -41,36 +41,36 @@
       <div class="tab-content container" id="pills-tabContent">
 
                 <div class="tab-pane fade show active" id="pills-{{$careers->first()->careerCategory->slug}}" role="tabpanel" aria-labelledby="pills-{{$careers->first()->careerCategory->slug}}-tab">
-                        <div class="my-2">
-                            <h2>{{$careers->first()->careerCategory->title}}</h2>
-                        </div>
+                            <div class="my-2">
+                                <h2>{{$careers->first()->careerCategory->title}}</h2>
+                            </div>
                         @foreach ($careers as $career)
 
-                        @if ($career->careerCategory->slug == $careers->first()->careerCategory->slug)
+                            @if ($career->careerCategory->slug == $careers->first()->careerCategory->slug)
 
 
 
-                        <div class="row d-flex justify-content-start mb-2">
-                            @if ($career->image)
-                                <div class="col-md-4 image figure"><a style="text-decoration:none" href="{{route('careers.show',$career->slug)}}#single-content"><img src="{{ $career->image_url }}"
-                                alt="{{$career->slug}}" class="figure-img img-fluid rounded"></a>
-                                </div>
-                            @endif
+                            <div class="row d-flex justify-content-start mb-2">
+                                @if ($careers->first()->image)
+                                    <div class="col-md-4 image figure"><a style="text-decoration:none" href="{{route('careers.show',$careers->first()->slug)}}#single-content"><img src="{{ $careers->first()->image_url }}"
+                                    alt="{{$careers->first()->slug}}" class="figure-img img-fluid rounded"></a>
+                                    </div>
+                                @endif
 
 
-                            <div class="col-sm-6 ">
-                            <h5>{{$career->title}}</h5>
+                                <div class="col-sm-6 ">
+                                    <h5>{{$careers->first()->title}}</h5>
                                     <p>
-                                      {!!Str::words($career->excerpt,15)!!}
+                                    {!!Str::words($careers->first()->excerpt,15)!!}
                                     </p>
                                     <p>Already have an Orange MyTunes Music Gift Card?</p>
-                                      <a href="{{route('careers.show',$career->slug)}}#single-content" class="btn btn-primary btn-unique ">Apply Now</a>
-                                  </div>
+                                    <a href="{{route('careers.show',$careers->first()->slug)}}#single-content" class="btn btn-primary btn-unique ">Apply Now</a>
+                                </div>
 
 
-                        </div>
+                            </div>
 
-                        @endif
+                            @endif
                         @endforeach
                 </div>
 
