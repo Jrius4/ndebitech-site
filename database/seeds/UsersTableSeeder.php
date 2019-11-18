@@ -15,8 +15,10 @@ class UsersTableSeeder extends Seeder
         // DB::statement('SET FOREIGN_KEY_CHECKS=0');
         DB::table('users')->delete();
 
-
-        $faker = \Faker\Factory::create();
+        if (env('APP_ENV') === 'local')
+        {
+            // generate 3 users/author
+            $faker = \Faker\Factory::create();
 
             DB::table('users')->insert([
                 [
@@ -41,47 +43,18 @@ class UsersTableSeeder extends Seeder
                     'bio' => $faker->text(rand(250, 300))
                 ],
             ]);
-
-        // if (env('APP_ENV') === 'local')
-        // {
-        //     // generate 3 users/author
-        //     $faker = \Faker\Factory::create();
-
-        //     DB::table('users')->insert([
-        //         [
-        //             'name' => "Kazibwe Julius Junior",
-        //             'slug' => 'kazibwe-julius-junior',
-        //             'email' => "kazibwejuliusjunior@gmail.com",
-        //             'password' => bcrypt('admins3cret'),
-        //             'bio' => $faker->text(rand(250, 300))
-        //         ],
-        //         [
-        //             'name' => "Male Paul",
-        //             'slug' => 'male-paul',
-        //             'email' => "mp@test.com",
-        //             'password' => bcrypt('s3cret'),
-        //             'bio' => $faker->text(rand(250, 300))
-        //         ],
-        //         [
-        //             'name' => "Jjuuko Henry",
-        //             'slug' => 'jjuuku-henry',
-        //             'email' => "jh@test.com",
-        //             'password' => bcrypt('s3cret'),
-        //             'bio' => $faker->text(rand(250, 300))
-        //         ],
-        //     ]);
-        // }
-        // else
-        // {
-        //     DB::table('users')->insert([
-        //         [
-        //             'name' => "administrator",
-        //             'slug' => 'admin',
-        //             'email' => "kazibwejuliusjunior@gmail.com",
-        //             'password' => bcrypt('admins3cret'),
-        //             'bio' => "I'm an Administrator"
-        //         ]
-        //     ]);
-        // }
+        }
+        else
+        {
+            DB::table('users')->insert([
+                [
+                    'name' => "administrator",
+                    'slug' => 'admin',
+                    'email' => "kazibwejuliusjunior@gmail.com",
+                    'password' => bcrypt('admins3cret'),
+                    'bio' => "I'm an Administrator"
+                ]
+            ]);
+        }
     }
 }
