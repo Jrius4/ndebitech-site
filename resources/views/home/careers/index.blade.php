@@ -39,7 +39,7 @@
     </ul>
 </div>
       <div class="tab-content container" id="pills-tabContent">
-
+{{-- 
                 <div class="tab-pane fade show active" id="pills-{{$careers->first()->careerCategory->slug}}" role="tabpanel" aria-labelledby="pills-{{$careers->first()->careerCategory->slug}}-tab">
                             <div class="my-2">
                                 <h2>{{$careers->first()->careerCategory->title}}</h2>
@@ -72,7 +72,7 @@
 
                             @endif
                         @endforeach
-                </div>
+                </div> --}}
 
                     @foreach ($categories as $category)
 
@@ -116,28 +116,3 @@
 
 @endsection
 
-{{--
-
-    <div class="row justify-content-center text-center">
-          <div class="col-sm-6">
-            <a href="post.html"><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/blog1.jpg" alt=""
-                class="img-fluid"></a>
-          </div>
-
-          <div class="col-sm-6 ">
-            <h5>Data Analysis</h5>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque expedita tempore quasi omnis a aut et totam illo
-              fuga accusamus
-              dolorum vero, ut harum consectetur. Minima molestias officiis culpa non sed dicta itaque. Et aliquam illo
-              obcaecati
-              molestias veritatis porro.
-            </p>
-            <p>Already have an Orange MyTunes Music Gift Card?</p>
-              <a href="#" class="btn btn-primary btn-unique ">Apply Now</a>
-          </div>
-
-
-        </div>
-
-    --}}
