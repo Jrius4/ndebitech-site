@@ -1,5 +1,6 @@
 <?php
 
+use Faker\Factory;
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
@@ -18,7 +19,7 @@ class UsersTableSeeder extends Seeder
         if (env('APP_ENV') === 'local')
         {
             // generate 3 users/author
-            $faker = \Faker\Factory::create();
+            $faker = Factory::create();
 
             DB::table('users')->insert([
                 [
