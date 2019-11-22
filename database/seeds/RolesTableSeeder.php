@@ -42,12 +42,17 @@ class RolesTableSeeder extends Seeder
         if (env('APP_ENV') === 'local')
         {
             // second user as editor
-            $user2 = User::find(2);
+            $user2 = User::find(3);
             $user2->detachRole($editor);
             $user2->attachRole($editor);
 
+            // charity
+            $user1 = User::find(2);
+            $user1->detachRole($admin);
+            $user1->attachRole($admin);
+
             // third user as author
-            $user3 = User::find(3);
+            $user3 = User::find(4);
             $user3->detachRole($author);
             $user3->attachRole($author);
         }

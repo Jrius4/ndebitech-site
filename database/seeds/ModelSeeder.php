@@ -26,12 +26,12 @@ class ModelSeeder extends Seeder
         if(env('APP_ENV') === 'local')
         {
             // DB::statement('SET FOREIGN_KEY_CHECKS = 0');
-            // if (env('DB_CONNECTION') === 'pgsql') {
-            //     DB::statement('SET FOREIGN_KEY_CHECKS = false');
-            // }
-            // else {
-            //     DB::statement('SET FOREIGN_KEY_CHECKS = 0');
-            // }
+            if (env('DB_CONNECTION') === 'pgsql') {
+                DB::statement('SET FOREIGN_KEY_CHECKS = false');
+            }
+            else {
+                DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+            }
             CareerCategory::truncate();
             Career::truncate();
             ClientTestimony::truncate();
