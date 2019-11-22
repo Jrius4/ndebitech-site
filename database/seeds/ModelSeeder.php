@@ -13,6 +13,7 @@ use App\ProjectCategory;
 use App\ServiceCategory;
 use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 
 class ModelSeeder extends Seeder
 {
@@ -27,10 +28,10 @@ class ModelSeeder extends Seeder
         {
             // DB::statement('SET FOREIGN_KEY_CHECKS = 0');
             if (env('DB_CONNECTION') === 'pgsql') {
-                DB::statement('SET FOREIGN_KEY_CHECKS = false');
+                Schema::disableForeignKeyConstraints();
             }
             else {
-                DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+                Schema::disableForeignKeyConstraints();
             }
             CareerCategory::truncate();
             Career::truncate();
