@@ -35,13 +35,16 @@
                   <div class="nav-item active"><a href="{{url('/')}}" class="nav-link">Home</a></div>
                   <div class="nav-item"><a href="{{url('/processes')}}" class="nav-link">Processes</a></div>
 
+                <div class="nav-item"><a href="{{route('projects.index')}}" class="nav-link">Projects</a></div>
                 <div class="nav-item"><a href="{{url('/blog')}}" class="nav-link">Blog</a></div>
                 <div class="nav-item"><a href="{{url('/careers')}}" class="nav-link">Careers</a></div>
                   <div class="nav-item"><a href="#" class="nav-link">Contact Us</a></div>
                   <div class="nav-item">
                     <ul class="list-inline">
                     <li class="list-inline-item">
-                            <button type="button" class="btn btn-outline-secondary btn-unique bg-light">GEt A QUOTE</button>
+                            {{-- <button type="button" class="btn btn-white btn-quote" >GEt A QUOTE</button> --}}
+                            <button id="navbarCategory" class="nav-link text-center btn btn-white btn-quote"
+                            data-toggle="modal" data-target="#myModal">GET QUOTE</button>
                     </li>
 
                     </ul>

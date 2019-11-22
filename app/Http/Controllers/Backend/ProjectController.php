@@ -28,13 +28,13 @@ class ProjectController extends BackendController
 
         if (($status = $request->get('status')) && $status == 'trash')
         {
-            $projects       = Project::onlyTrashed()->with('projectCategory')->latest()->paginate($this->limit);
+            $projects       = Project::onlyTrashed()->with('projectCategory')->orderBy('created_at','asc')->paginate($this->limit);
             $projectCount   = Project::onlyTrashed()->count();
             $onlyTrashed    = TRUE;
         }
         else
         {
-            $projects       = Project::with('projectCategory')->latest()->paginate($this->limit);
+            $projects       = Project::with('projectCategory')->orderBy('created_at','asc')->paginate($this->limit);
             $projectCount   = Project::count();
         }
 
@@ -72,7 +72,7 @@ class ProjectController extends BackendController
         $data = $this->handleRequest($request);
 
         $newProject = Project::create($data);
-        
+
         return redirect('/backend/projects')->with('message', 'Your project was created successfully!');
     }
 
@@ -114,7 +114,7 @@ class ProjectController extends BackendController
      */
     public function show($id)
     {
-        
+
     }
 
     /**

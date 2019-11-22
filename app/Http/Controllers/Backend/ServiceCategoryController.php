@@ -6,12 +6,22 @@ use App\Service;
 use App\ServiceCategory;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Intervention\Image\Facades\Image;
+use App\Http\Requests\ServiceCategoryRequest;
 use App\Http\Requests\ServiceCategoryStoreRequest;
 use App\Http\Controllers\Backend\BackendController;
 use App\Http\Requests\ServiceCategoryUpdateRequest;
 
 class ServiceCategoryController extends BackendController
 {
+
+    protected $uploadPath;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->uploadPath = public_path(config('cms.image.directory'));
+    }
     /**
      * Display a listing of the resource.
      *
@@ -40,11 +50,45 @@ class ServiceCategoryController extends BackendController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ServiceCategoryStoreRequest $request)
+    public function store(ServiceCategoryRequest $request)
     {
-        ServiceCategory::create($request->all());
+        $data = $this->handleRequest($request);
+        ServiceCategory::create($data);
         return redirect("/backend/service-categories")->with("message", "New service category was created successfully!");
     }
+
+
+    private function handleRequest($request)
+    {
+        $data = $request->all();
+
+        if ($request->hasFile('image'))
+        {
+            $image       = $request->file('image');
+            $fileName    = $image->getClientOriginalName();
+            $destination = $this->uploadPath;
+
+            $successUploaded = $image->move($destination, $fileName);
+
+            if ($successUploaded)
+            {
+                $width     = config('cms.image.thumbnail.width');
+                $height    = config('cms.image.thumbnail.height');
+                $extension = $image->getClientOriginalExtension();
+                $thumbnail = str_replace(".{$extension}", "_thumb.{$extension}", $fileName);
+
+                Image::make($destination . '/' . $fileName)
+                    ->resize($width, $height)
+                    ->save($destination . '/' . $thumbnail);
+            }
+
+            $data['image'] = $fileName;
+        }
+
+        return $data;
+    }
+
+
 
     /**
      * Display the specified resource.
@@ -76,9 +120,16 @@ class ServiceCategoryController extends BackendController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ServiceCategoryUpdateRequest $request, $id)
+    public function update(ServiceCategoryRequest $request, $id)
     {
-        ServiceCategory::findOrFail($id)->update($request->all());
+        $category = ServiceCategory::findOrFail($id);
+        $oldImage = $category->image;
+        $data     = $this->handleRequest($request);
+        $category->update($data);
+
+        if ($oldImage !== $category->image) {
+            $this->removeImage($oldImage);
+        }
 
         return redirect("/backend/service-categories")->with("message", "Service Category was updated successfully!");
     }
@@ -95,7 +146,22 @@ class ServiceCategoryController extends BackendController
 
         $category = ServiceCategory::findOrFail($id);
         $category->delete();
+        $this->removeImage($category->image);
 
         return redirect("/backend/service-categories")->with("message", "Service Category was deleted successfully!");
+    }
+
+    private function removeImage($image)
+    {
+        if ( ! empty($image) )
+        {
+            $imagePath     = $this->uploadPath . '/' . $image;
+            $ext           = substr(strrchr($image, '.'), 1);
+            $thumbnail     = str_replace(".{$ext}", "_thumb.{$ext}", $image);
+            $thumbnailPath = $this->uploadPath . '/' . $thumbnail;
+
+            if ( file_exists($imagePath) ) unlink($imagePath);
+            if ( file_exists($thumbnailPath) ) unlink($thumbnailPath);
+        }
     }
 }

@@ -18,11 +18,11 @@ class CreateQuoteRequestsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('company');
-            $table->string('telephone');
-            $table->text('idea');
-            $table->text('description');
-            $table->string('budget');
-            $table->string('time_done');
+            $table->string('telephone')->nullable();
+            $table->text('idea')->nullable();
+            $table->text('description')->nullable();
+            $table->string('budget')->nullable();
+            $table->string('time_done')->nullable();
             $table->bigInteger('field_industry_id')->unsigned()->nullable();
             $table->softDeletes();
             $table->timestamps();

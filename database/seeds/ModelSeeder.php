@@ -40,15 +40,37 @@ class ModelSeeder extends Seeder
 
             $careerCategoryQty = 6;
             $projectCategoryQty = 4;
-            $serviceCategoryQty = 5;
-            $projectQty = 15;
+            // $serviceCategoryQty = 5;
+            DB::table('service_categories')->insert([
+                [
+                    'title' => 'Digital Marketing',
+                    'slug' => "digital-marketing",
+                    'description' => 'Digital Marketing service description'
+                ],
+                [
+                    'title' => 'App Development',
+                    'slug' => "app-development",
+                    'description' => 'App Development service description'
+                ],
+                [
+                    'title' => 'Web Development',
+                    'slug' => "web-development",
+                    'description' => 'Web Development service description'
+                ],
+                [
+                    'title' => 'Design & Branding',
+                    'slug' => "desing-and-branding",
+                    'description' => 'Desing & Branding service description'
+                ],
+            ]);
+            $projectQty = 4;
             $clientTestimonyQty = 15;
             $careerQty = 15;
             $fieldIndustryQty = 15;
             $ndebiTechClientQty = 15;
-            $systemProcessQty = 15;
+            $systemProcessQty = 3;
             $serviceQty = 8;
-            $quoteRequestQty = 15;
+            $quoteRequestQty = 5;
 
 
             factory(CareerCategory::class,$careerCategoryQty)->create();
@@ -60,7 +82,7 @@ class ModelSeeder extends Seeder
             //     }
             // );
 
-            factory(ServiceCategory::class,$serviceCategoryQty)->create();
+            // factory(ServiceCategory::class,$serviceCategoryQty)->create();
             factory(Service::class,$serviceQty)->create();
             // factory(Service::class,$serviceQty)->create()->each(
             //     function($service){

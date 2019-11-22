@@ -20,7 +20,7 @@
           </div>
         </div><!-- /.container-fluid -->
       </section>
-  
+
 
       <!-- Main content -->
       <section class="content">
@@ -104,8 +104,8 @@
         <!-- /.row -->
       </section>
       <!-- /.content -->
-  
-  
+
+
 
 
 @endsection

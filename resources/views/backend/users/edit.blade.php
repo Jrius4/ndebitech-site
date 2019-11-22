@@ -24,7 +24,7 @@
             </div>
           </div><!-- /.container-fluid -->
         </section>
-        
+
 
       <!-- Main content -->
       <section class="content">
@@ -45,7 +45,7 @@
 
                 <div class="row d-flex justify-content-between">
                     @include('backend.users.form')
-                  </div> 
+                  </div>
 
             {!! Form::close() !!}
           </div>
@@ -58,5 +58,6 @@
 
 
 @endsection
+@include('backend.users.script')
 
 

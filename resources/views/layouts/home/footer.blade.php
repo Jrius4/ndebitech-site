@@ -96,7 +96,19 @@
         <div class="page-links">
               <div class="container">
                 <div class="row">
-                  <div class="col-lg-3 col-sm-6"></div>
+                  <div class="col-lg-3 col-sm-6">
+                    <h3>
+                        <img class="img-fluid bg-transparent" src="{{asset('/img/logos/Ndebi Tech Logo.png')}}"/>
+                    </h3>
+
+                    <div>
+                        <p class="text-left text-muted">
+                            Ntinda Complex, <br>
+                            Block C, Level 3 Ntinda, <br>
+                            Kampala, Uganda <br>
+                        </p>
+                    </div>
+                  </div>
                   <div class="col-lg-3 col-sm-6">
                     <h3>Site Map</h3>
                     <ul class="list-unstyled">
@@ -135,7 +147,7 @@
               <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <p>&copy; {{date('Y')}} <span class="text-primary"></span>All rights reserved.</p>
+                        <p>{{date('Y')}}&copy;ndebitech <span class="text-primary"></span>All rights reserved.</p>
                     </div>
                     <div class="col-sm-6 text-right">
                         <p>designed by <a href="#" style="text-decoration:none" target="_blank">kazibwejuliusjunior@gmail.com</a></p>

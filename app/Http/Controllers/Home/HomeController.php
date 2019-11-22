@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Home;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\QuoteRequest;
+use App\ServiceCategory;
 
 class HomeController extends Controller
 {
@@ -14,7 +16,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('home.landing-page.index');
+        $categories = ServiceCategory::get();
+        return view('home.landing-page.index', compact('categories'));
     }
 
     public function contactUs()

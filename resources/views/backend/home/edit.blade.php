@@ -1,6 +1,6 @@
 @extends('layouts.backend.main')
 
-@section('title', 'MyBlog | Edit account')
+@section('title', 'Ndebitech Dashboard  | Edit account')
 
 @section('content')
 
@@ -38,12 +38,12 @@
             </div>
           </div><!-- /.container-fluid -->
         </section>
-        
+
 
 
       <!-- Main content -->
       <section class="content">
-              
+
 
               <div class="container-fluid">
                   <div class="row">
@@ -54,7 +54,7 @@
                           <h3>Create User</h3>
                         </div>
                       </div>
-              
+
               {!! Form::model($user, [
                   'method' => 'PUT',
                   'url'  => '/edit-account',

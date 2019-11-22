@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Views\Composers\ModalComposer;
 use Illuminate\Support\ServiceProvider;
 use App\Views\Composers\NavigationComposer;
 
@@ -14,7 +15,8 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('layouts.sidebar', NavigationComposer::class);        
+        view()->composer('layouts.sidebar', NavigationComposer::class);
+        view()->composer('home.modals.modal', ModalComposer::class);
     }
 
     /**

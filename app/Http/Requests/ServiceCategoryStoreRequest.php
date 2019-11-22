@@ -26,6 +26,7 @@ class ServiceCategoryStoreRequest extends Request
         return [
             'title' => 'required|unique:service_categories|max:255',
             'slug'  => 'required|unique:service_categories|max:255',
+            'image' => 'mimes:jpg,jpeg,bmp,png',
         ];
     }
 }

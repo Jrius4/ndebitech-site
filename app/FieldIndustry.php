@@ -16,9 +16,9 @@ class FieldIndustry extends Model
         return 'slug';
     }
 
-    public function getExcerptHtmlAttribute($value)
+    public function getDescriptionHtmlAttribute($value)
     {
-        return $this->excerpt ? Markdown::convertToHtml(e($this->excerpt)) : NULL;
+        return $this->description ? Markdown::convertToHtml(e($this->description)) : NULL;
     }
 
 

@@ -108,7 +108,7 @@
                                 @foreach ($posts as $post)
                                     @if ($post->category->title == $category->title  )
 
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
                                             <div class="post-item">
                                                 @if ($post->image)
                                                     <div class="image figure"><a style="text-decoration:none" href="{{ route('blog.show', $post->slug) }}"><img src="{{ $post->image_url }}"

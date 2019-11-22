@@ -1,10 +1,10 @@
 @extends('layouts.backend.main')
 
-@section('title', 'MyBlog | Create new project category')
+@section('title', 'Ndebitech Dashboard  | Create new project category')
 
 @section('content')
 
-    
+
        <!-- Content Header (Page header) -->
        <section class="content-header">
           <div class="container-fluid">
@@ -44,7 +44,7 @@
 
               <div class="row d-flex justify-content-between">
                 @include('backend.project-categories.form')
-              </div> 
+              </div>
 
             {!! Form::close() !!}
           </div>
@@ -54,7 +54,7 @@
     </div>
   </section>
       <!-- /.content -->
-  
+
 
 @endsection
 

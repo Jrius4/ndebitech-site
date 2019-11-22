@@ -1,6 +1,6 @@
 @extends('layouts.backend.main')
 
-@section('title', 'Ndebitech | Add new Industry')
+@section('title', 'Ndebitech Dashboard  | Add new Industry')
 
 @section('content')
 
@@ -42,11 +42,11 @@
                     'files'  => TRUE,
                     'id' => 'post-form'
                 ]) !!}
-                
+
                 <div class="row d-flex justify-content-between">
                   @include('backend.field-industries.form')
                 </div>
-                
+
                 {!! Form::close() !!}
               </div>
             </div>

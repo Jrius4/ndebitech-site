@@ -191,6 +191,11 @@ Route::resource('/careers', 'Home\CareerController',['only'=>['index','show','as
 
 //processes
 Route::resource('/processes', 'Home\ProcessController',['only'=>['index','show','as'=>'processes']]);
+Route::resource('/projects', 'Home\ProjectController',['only'=>['index','show','as'=>'projects']]);
+Route::resource('/services', 'Home\ServiceController',['only'=>['index','show','as'=>'services']]);
+Route::resource('/service-categories', 'Home\ServiceCategoryController',['only'=>['index','show','as'=>'service-categories']]);
+// Route::get('/service-categories/{service_category}','Home\ServiceController@showCategory',['as'=>'service-categories']);
+Route::put('/quote-requests/{quote_request}',['uses'=>'Home\QuoteRequestController@store','as'=>'quote-requests']);
 
 
 Route::get('/routes', function() {

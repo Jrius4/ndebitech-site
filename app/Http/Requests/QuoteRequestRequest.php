@@ -13,7 +13,7 @@ class QuoteRequestRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,12 @@ class QuoteRequestRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+        $rules = [
+            'name'        => 'required',
+            'email'         => 'required|email',
+            'company'      => 'required',
         ];
+
+        return $rules;
     }
 }

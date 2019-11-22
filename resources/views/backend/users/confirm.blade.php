@@ -1,6 +1,6 @@
 @extends('layouts.backend.main')
 
-@section('title', 'MyBlog | Delete Confirmation')
+@section('title', 'Ndebitech Dashboard  | Delete Confirmation')
 
 @section('content')
 
@@ -24,8 +24,8 @@
                 </div>
             </div><!-- /.container-fluid -->
         </section>
-          
-  
+
+
 
       <!-- Main content -->
       <section class="content">
