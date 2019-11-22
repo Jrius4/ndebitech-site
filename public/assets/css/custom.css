@@ -129,5 +129,8 @@ section.divider-2 h2{text-shadow:1px 1px 1px rgba(0,0,0,0.2)}
 section.divider-2 p.h5{font-weight:300;font-family:"Roboto",sans-serif}
 section.divider-2 hr{max-width:100px;border:2px rgb(37, 113, 235) solid;margin:30px auto}
 section.divider-2 p{font-weight:300}
+.post-life p{
+    color: snow;
+}
 
 

@@ -15,12 +15,13 @@
             </div>
         </div>
     </header>
-    <div class="container my-3">
+    <div class="my-4"></div>
+    {{-- <div class="container my-3">
         <ol class="breadcrumb">
           <li class="breadcrumb-item text-uppercase"> <a href="{{url('/')}}" class="text-primary">Home</a></li>
           <li class="breadcrumb-item active text-uppercase"><a href="{{url('/projects')}}" class="text-primary">Projects</a></li>
         </ol>
-    </div>
+    </div> --}}
     <div class="container">
 
         <div class="row d-flex justify-content-space">
@@ -134,12 +135,15 @@
 
 
                     <div class="row">
+                        <div class="d-none">
+                                {{$alt_class=0}}
+                        </div>
                         @foreach ($services as $service)
                             @if ($service->serviceCategory->title == $serviceCategory->title  )
 
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="post-item row d-flex justify-content-start">
-                                        @if ($service->image)
+
+                                    <div class="row container d-flex justify-content-center">
+                                        {{-- @if ($service->image)
                                             <div class="image figure col-md-6"><a style="text-decoration:none" href="{{ route('projects.show', $service->slug) }}"><img src="{{ $service->image_url }}"
                                                     alt="" class="figure-img img-fluid rounded"></a>
                                             </div>
@@ -147,17 +151,20 @@
                                             <div class="image figure col-md-6 bg-dark h-auto w-100 rounded" style="min-height:250px" ><a style="text-decoration:none" href="{{ route('projects.show', $service->slug) }}"><img src=""
                                                 alt="" class="figure-img img-fluid rounded"></a>
                                             </div>
-                                        @endif
+                                        @endif --}}
 
-                                    <div class="col-md-6 mr-auto">
-                                        <h4><a style="text-decoration:none" href="{{ route('projects.show', $service->slug) }}">{!!Str::words($service->title,5)!!}</a></h4>
-                                        <p class="intro">{!!Str::words($service->excerpt_html,15)!!}</p>
-                                        <p class="read-more"><a style="text-decoration:none" href="{{ route('projects.show', $service->slug) }}" class="btn btn-unique-outline btn-md btn-sm">Continue reading</a></p>
+                                        <div class="col-md-8 bg-dark p-4 my-1 post-life {{$alt_class%2==0?'mr-auto':'ml-auto'}}">
+                                            <h4><a style="text-decoration:none;color:teal" href="{{ route('projects.show', $service->slug) }}">{!!Str::words($service->title,5)!!}</a></h4>
+                                            <p class="intro">{!!$service->excerpt_html!!}</p>
+                                            {{-- <p class="read-more"><a style="text-decoration:none" href="{{ route('projects.show', $service->slug) }}" class="btn btn-unique-outline btn-md btn-sm">Continue reading</a></p> --}}
+                                        </div>
                                     </div>
-                                    </div>
-                                </div>
+
 
                             @endif
+                               <div class="d-none">
+                                    {{$alt_class++}}
+                               </div>
                         @endforeach
                     </div>
 
