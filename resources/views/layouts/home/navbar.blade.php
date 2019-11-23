@@ -38,6 +38,7 @@
                 <div class="nav-item"><a href="{{route('projects.index')}}" class="nav-link">Projects</a></div>
                 <div class="nav-item"><a href="{{url('/blog')}}" class="nav-link">Blog</a></div>
                 <div class="nav-item"><a href="{{url('/careers')}}" class="nav-link">Careers</a></div>
+                  <div class="nav-item"><a href="{{url('/about-us')}}" class="nav-link">About Us</a></div>
                   <div class="nav-item"><a href="#" class="nav-link">Contact Us</a></div>
                   <div class="nav-item">
                     <ul class="list-inline">

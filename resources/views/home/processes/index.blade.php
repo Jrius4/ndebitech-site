@@ -84,34 +84,21 @@
       </div>
 
 
+   <div class="container-fluid text-center mb-0">
+        <div>
+            <h2>How we work</h2>
+                <p>We approach every project  with our collabrative  and iterative process that is simple ,but effective</p>
+        </div>
 
- <section class="row d-flex justify-content-center text-center py-2">
-   <div>
-     <h2>How we work</h2>
-      <p>We approach every project  with our collabrative  and iterative process that is simple ,but effective</p>
-   </div>
- </section>
-
-
- <section>
-
-   <div class="container-fluid text-center">
-
-     <div class="row justify-content-center">
+     <div class="row justify-content-around">
 
         @foreach ($processes as $process)
 
 
         <div class="col-md-4 process p-2 mb-2">
             <h2>{{$process->title}}</h2>
-                <p>{!!Str::words($process->excerpt,15)!!}</p>
-        <a href="{{route('processes.show',$process->slug)}}" class="btn btn-primary btn-unique ">Learn More</a>
-
-            {{-- @if ($count>count($btn_classes))
-                <a class="btn {{$btn_classes[$count=rand(0,2)]}} btn-unique ">Learn More</a>
-            @elseif ($count<count($btn_classes))
-                <a class="btn {{$btn_classes[$count=rand(0,3)+1]}} btn-unique ">Learn More</a>
-            @endif --}}
+            <p>{!!Str::words($process->excerpt,15)!!}</p>
+            <a href="{{route('processes.show',$process->slug)}}" class="btn btn-primary btn-unique ">Learn More</a>
         </div>
 
 
@@ -119,10 +106,10 @@
 
 
      </div>
-   </div>
 
 
- </section>
+
+ </div>
 
 
 

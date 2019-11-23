@@ -19,17 +19,15 @@
 <body class="">
 
 
-    @include('layouts.home.navbar')
+        @include('layouts.home.navbar')
 
         @include('home.modals.modal')
 
-       <section class="pt-0 mt-0">
             @yield('content')
-       </section>
 
 
-    {{-- <div style="min-height:300px;"></div> --}}
-    <div class="clearfix"></div>
+
+
     @include('layouts.home.footer')
 
 

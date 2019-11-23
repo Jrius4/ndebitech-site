@@ -132,5 +132,14 @@ section.divider-2 p{font-weight:300}
 .post-life p{
     color: snow;
 }
-
+.tilt-section{
+    transform: rotate(-90deg) scale(2);
+    border-bottom: teal 3px solid;
+    padding: 5px;
+    text-align: start;
+}
+.tilt-section h6{
+    color: darkgrey;
+    font-weight: bold;
+}
 
