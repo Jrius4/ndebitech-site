@@ -303,13 +303,23 @@
             </div>
           </div>
         </section>
-        <section class="d-none">
+        <section class="">
             <div class="container-fluid row d-flex justify-content-center">
                 <div>
                     <h3>Who we have helped</h3>
                 </div>
             </div>
-            <h2>Testimonies</h2>
+
+                <blockquote>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ab corrupti
+                        deleniti corporis ad ut nisi ratione? Nostrum quos, nisi quaerat quibusdam
+                        ducimus aliquid corrupti aperiam, mollitia, tenetur placeat repellat.
+                    </p>
+                </blockquote>
+
+
+
         </section>
       </div>
 

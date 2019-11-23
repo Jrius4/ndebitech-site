@@ -14,22 +14,27 @@
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quasi temporibus explicabo nulla maxime, eveniet, sapiente quo maiores commodi natus totam consequatur esse quidem architecto? Pariatur at odit natus sint!
                         </p>
-                        <h3>{{$process->title}}</h3>
+                        <h3></h3>
                     </div>
             </div>
         </div>
     </header>
-    <div class="container my-3">
+
+    {{-- <div class="container my-3">
         <ol class="breadcrumb">
             <li class="breadcrumb-item text-uppercase"> <a href="{{url('/')}}" class="text-primary">Home</a></li>
             <li class="breadcrumb-item active text-uppercase"><a href="{{url('/processes')}}" class="text-primary">Processes</a></li>
         </ol>
-    </div>
+    </div> --}}
 
     <div class="container">
-        <p>
+        <div style="margin-top:-20px" class="bg-light p-3 card">
+            <h3>{{$process->title}}</h3>
+            <p>
             {!!$process->body!!}
-        </p>
+            </p>
+        </div>
+
     </div>
 
 

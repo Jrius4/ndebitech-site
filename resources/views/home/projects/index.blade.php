@@ -134,29 +134,62 @@
 
 
                     <div class="row">
+                            <div class="d-none">
+                                    {{$alt_class=$projects->count()}}
+                            </div>
                         @foreach ($projects as $project)
                             {{-- @if ($project->category->title == $category->title  ) --}}
 
+                                @if ($alt_class%2==0)
+
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="post-item row d-flex justify-content-start">
+                                                @if ($project->image)
+                                                    <div class="image figure col-md-6"><a style="text-decoration:none" href="{{ route('projects.show', $project->slug) }}"><img src="{{ $project->image_url }}"
+                                                            alt="" class="figure-img img-fluid rounded"></a>
+                                                    </div>
+                                                @else
+                                                    <div class="image figure col-md-6 bg-dark h-auto w-100 rounded" style="min-height:250px" ><a style="text-decoration:none" href="{{ route('projects.show', $project->slug) }}"><img src=""
+                                                        alt="" class="figure-img img-fluid rounded"></a>
+                                                    </div>
+                                                @endif
+
+                                            <div class="col-md-6 mr-auto">
+                                                <h4><a style="text-decoration:none" href="{{ route('projects.show', $project->slug) }}">{!!Str::words($project->title,5)!!}</a></h4>
+                                                <p class="intro">{!!Str::words($project->excerpt_html,15)!!}</p>
+                                                <p class="read-more"><a style="text-decoration:none" href="{{ route('projects.show', $project->slug) }}" class="btn btn-unique-outline btn-md btn-sm">Continue reading</a></p>
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                @else
+
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="post-item row d-flex justify-content-start">
+                                        <div class="post-item row d-flex justify-content-start">
+
+
+                                        <div class="col-md-6 ml-auto">
+                                            <h4><a style="text-decoration:none" href="{{ route('projects.show', $project->slug) }}">{!!Str::words($project->title,5)!!}</a></h4>
+                                            <p class="intro">{!!Str::words($project->excerpt_html,15)!!}</p>
+                                            <p class="read-more"><a style="text-decoration:none" href="{{ route('projects.show', $project->slug) }}" class="btn btn-unique-outline btn-md btn-sm">Continue reading</a></p>
+                                        </div>
                                         @if ($project->image)
-                                            <div class="image figure col-md-6"><a style="text-decoration:none" href="{{ route('projects.show', $project->slug) }}"><img src="{{ $project->image_url }}"
+                                                <div class="image figure col-md-6"><a style="text-decoration:none" href="{{ route('projects.show', $project->slug) }}"><img src="{{ $project->image_url }}"
+                                                        alt="" class="figure-img img-fluid rounded"></a>
+                                                </div>
+                                            @else
+                                                <div class="image figure col-md-6 bg-dark h-auto w-100 rounded" style="min-height:250px" ><a style="text-decoration:none" href="{{ route('projects.show', $project->slug) }}"><img src=""
                                                     alt="" class="figure-img img-fluid rounded"></a>
-                                            </div>
-                                        @else
-                                            <div class="image figure col-md-6 bg-dark h-auto w-100 rounded" style="min-height:250px" ><a style="text-decoration:none" href="{{ route('projects.show', $project->slug) }}"><img src=""
-                                                alt="" class="figure-img img-fluid rounded"></a>
-                                            </div>
-                                        @endif
+                                                </div>
+                                            @endif
+                                        </div>
+                                    </div>
 
-                                    <div class="col-md-6 mr-auto">
-                                        <h4><a style="text-decoration:none" href="{{ route('projects.show', $project->slug) }}">{!!Str::words($project->title,5)!!}</a></h4>
-                                        <p class="intro">{!!Str::words($project->excerpt_html,15)!!}</p>
-                                        <p class="read-more"><a style="text-decoration:none" href="{{ route('projects.show', $project->slug) }}" class="btn btn-unique-outline btn-md btn-sm">Continue reading</a></p>
-                                    </div>
-                                    </div>
+                                @endif
+
+                                <div class="d-none">
+                                    {{$alt_class-=1}}
                                 </div>
-
                             {{-- @endif --}}
                         @endforeach
                     </div>

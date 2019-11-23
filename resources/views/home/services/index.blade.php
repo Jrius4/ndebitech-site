@@ -136,7 +136,7 @@
 
                     <div class="row">
                         <div class="d-none">
-                                {{$alt_class=0}}
+                                {{$alt_class=$services->count()}}
                         </div>
                         @foreach ($services as $service)
                             @if ($service->serviceCategory->title == $serviceCategory->title  )
@@ -155,16 +155,16 @@
 
                                         <div class="col-md-8 bg-dark p-4 my-1 post-life {{$alt_class%2==0?'mr-auto':'ml-auto'}}">
                                             <h4><a style="text-decoration:none;color:teal" href="{{ route('projects.show', $service->slug) }}">{!!Str::words($service->title,5)!!}</a></h4>
-                                            <p class="intro">{!!$service->excerpt_html!!}</p>
+                                            <p class="intro">{!!$service->body_html!!}</p>
                                             {{-- <p class="read-more"><a style="text-decoration:none" href="{{ route('projects.show', $service->slug) }}" class="btn btn-unique-outline btn-md btn-sm">Continue reading</a></p> --}}
                                         </div>
                                     </div>
 
-
+                                    <div class="d-none">
+                                        {{$alt_class-=1}}
+                                    </div>
                             @endif
-                               <div class="d-none">
-                                    {{$alt_class++}}
-                               </div>
+
                         @endforeach
                     </div>
 

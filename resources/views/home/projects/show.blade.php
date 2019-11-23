@@ -13,39 +13,46 @@
                 </div>
             </div>
         </header>
-        <div class="container my-3">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item text-uppercase"> <a href="{{url('/')}}" class="text-primary">Home</a></li>
-              <li class="breadcrumb-item active text-uppercase"><a href="{{url('/projects')}}" class="text-primary">Projects</a></li>
-            </ol>
-        </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <article class="post-item post-detail">
-                    @if ($project->image)
-                        <div class="post-item-image figure">
-                            <img class="figure-img img-fluid rounded" src="{{ $project->image_url }}" alt="{{ $project->title }}">
-                        </div>
-                    @else
-                        <div class="d-none"></div>
-                    @endif
+<div class="container">
+<div style="margin-top:-25px" class="bg-light p-2 card">
 
-                    <div class="post-item-body">
-                        <div class="padding-10">
-                            <h1>{{ $project->title }}</h1>
-                            <div>
-                                {!! $project->body_html !!}
+        {{-- <div class="mb-3">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item text-uppercase"> <a href="{{url('/')}}" class="text-primary">Home</a></li>
+                  <li class="breadcrumb-item active text-uppercase"><a href="{{url('/projects')}}" class="text-primary">Projects</a></li>
+                </ol>
+            </div> --}}
+            <div class="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <article class="post-item post-detail">
+                            @if ($project->image)
+                                <div class="post-item-image figure">
+                                    <img class="figure-img img-fluid rounded" src="{{ $project->image_url }}" alt="{{ $project->title }}">
+                                </div>
+                            @else
+                                <div class="d-none"></div>
+                            @endif
+
+                            <div class="post-item-body">
+                                <div class="padding-10">
+                                    <h1>{{ $project->title }}</h1>
+                                    <div>
+                                        {!! $project->body_html !!}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </article>
+
+
+
                     </div>
-                </article>
 
-
-
+                </div>
             </div>
 
-        </div>
-    </div>
+</div>
+</div>
+
 
 @endsection
