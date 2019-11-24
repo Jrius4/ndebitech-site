@@ -328,9 +328,9 @@
                             <img src="http://via.placeholder.com/200x200" alt="" class="rounded-circle img-fluid"/>
                           </div>
                           <div class="col-sm-9">
-                            <p><i class="fa fa-quote-left"></i>
+                            <p><i class="text-primary fa fa-quote-left"></i>
                                 {{$testimonies->last()->message}}
-                                <i class="fa fa-quote-right"></i></p>
+                                <i class="text-primary fa fa-quote-right"></i></p>
                             <small class="smallest mute">-{{$testimonies->last()->title_of_client.' '.$testimonies->last()->name}}</small>
                           </div>
                         </div>
@@ -355,7 +355,7 @@
                           </div>
                           <div class="col-sm-9">
                             <h3></h3>
-                            <p><i class="fa fa-quote-left"></i> {{$testimony->message}} <i class="fa fa-quote-right"></i></p>
+                            <p><i class="text-primary fa fa-quote-left"></i> {{$testimony->message}} <i class="text-primary fa fa-quote-right"></i></p>
                             <small class="smallest mute">-{{$testimony->title_of_client.' '.$testimony->name}}</small>
                           </div>
                         </div>
