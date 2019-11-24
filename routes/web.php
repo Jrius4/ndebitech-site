@@ -199,6 +199,8 @@ Route::put('/quote-requests/{quote_request}',['uses'=>'Home\QuoteRequestControll
 Route::get('/about-us','Home\HomeController@aboutUs');
 Route::get('/contact-us','Home\HomeController@contactUs');
 
+Route::get('/send/email','Home\HomeController@mail');
+
 Route::get('/routes', function() {
     $routeCollection = Route::getRoutes();
 

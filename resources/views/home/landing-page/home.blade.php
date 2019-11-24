@@ -65,81 +65,7 @@
 
 
         </section>
-{{--
-        <!-- Categories Section-->
-        <section class="categories categories-2">
-          <div class="container">
-            <div class="categories-inner">
-              <header>
-                <h2 class="h5 heading-line d-none d-md-block">Categories</h2>
-              </header>
-              <div class="row text-center">
-                <div class="col-md-4 item"><a href="category.html">
-                    <h4>Digital Cameras</h4>
-                    <p>Lorem ipsum dolor sit amet</p>
-                    <div class="image"><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/cat-cam.jpg" alt="camera" class="img-fluid"></div></a></div>
-                <div class="col-md-4 item"><a href="category.html">
-                    <h4>Camera Lenses</h4>
-                    <p>Lorem ipsum dolor sit amet</p>
-                    <div class="image"><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/cat-lenses.jpg" alt="lenses" class="img-fluid"></div></a></div>
-                <div class="col-md-4 item"><a href="category.html">
-                    <h4>Accessories</h4>
-                    <p>Lorem ipsum dolor sit amet</p>
-                    <div class="image"><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/cat-accessories.jpg" alt="accessories" class="img-fluid"></div></a></div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Cameras Section-->
-         --}}
-        {{-- <section class="product-1">
-          <div class="container">
-            <header>
-                <h2 class="h3 heading-line">Cameras Collection</h2>
-            </header>
-            <div class="row d-flex flex-row align-items-stretch">
-                <div class="col-lg-6">
-                    <div class="item item-big text-right">
-                    <h2>Digital <br>Cameras</h2>
-                    <a href="category.html" class="btn btn-unique btn-lg">Shop Now</a>
-                    <img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/camera-big.jpg" alt="camera" class="img-fluid"/>
-                    </div>
-                </div>
-              <div class="col-lg-6">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="item">
-                      <h4>EOS Digital SLR</h4>
-                      <p class="text-primary">$1.299</p><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/camera-1.jpg" alt="camera" class="img-fluid">
-                      <div class="overlay d-flex align-items-center justify-content-center"><a href="detail.html" class="btn btn-unique">View Details</a></div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="item">
-                      <h4>EOS Digital SLR</h4>
-                      <p class="text-primary">$1.299</p><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/cat-cam.jpg" alt="camera" class="img-fluid">
-                      <div class="overlay d-flex align-items-center justify-content-center"><a href="detail.html" class="btn btn-unique">View Details</a></div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="item">
-                      <h4>EOS Digital SLR</h4>
-                      <p class="text-primary">$1.299</p><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/camera-3.jpg" alt="camera" class="img-fluid">
-                      <div class="overlay outStock d-flex align-items-center justify-content-center"><strong class="text-primary">Sold Out</strong></div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="item">
-                      <h4>EOS Digital SLR</h4>
-                      <p class="text-primary">$1.299</p><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/camera-2.jpg" alt="camera" class="img-fluid">
-                      <div class="overlay d-flex align-items-center justify-content-center"><a href="detail.html" class="btn btn-unique">View Details</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> --}}
+
 
 
         <section class="">
@@ -177,7 +103,7 @@
 
                 @foreach ($clients as $client)
                     <span class="col-xs-3 p-2 bg-transport m-1">
-                    <img src="{{$client->imageUrl}}" alt="{{$client->name}}">
+                    <img height="75" width="75" src="{{$client->imageUrl}}" alt="{{$client->name}}">
                     </span>
                 @endforeach
                 @endif

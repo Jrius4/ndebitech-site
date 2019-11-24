@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\QuoteRequest;
 use App\ClientTestimony;
+use App\NdebiTechClient;
+use App\ServiceCategory;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\NdebiTechClient;
-use App\QuoteRequest;
-use App\ServiceCategory;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -33,5 +34,20 @@ class HomeController extends Controller
     public function contactUs()
     {
         return view('home.contact-us.index');
+    }
+
+    public function mail()
+    {
+        $data = array('name'=>'Kazibwe Julius Junior','body'=>"Test mail");
+
+        Mail::send('emails.index',$data,function($message){
+            $message->to('kazibwejuliusjunior@gmail.com','Artisan Web')
+            ->subject('Ndebi Tech Web Testing Mail');
+            $message->from('kazibwejuliusjunior@gmail.com','Kazibwe Julius Junior');
+
+        });
+
+        echo "Email Sent. Check your inbox.";
+
     }
 }
