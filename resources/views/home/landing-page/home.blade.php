@@ -303,24 +303,88 @@
             </div>
           </div>
         </section>
-        <section class="">
+
+    @if ($testimonies->count()>0)
+
+    <section class="">
             <div class="container-fluid row d-flex justify-content-center">
                 <div>
                     <h3>Who we have helped</h3>
                 </div>
             </div>
 
-                <blockquote>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ab corrupti
-                        deleniti corporis ad ut nisi ratione? Nostrum quos, nisi quaerat quibusdam
-                        ducimus aliquid corrupti aperiam, mollitia, tenetur placeat repellat.
-                    </p>
-                </blockquote>
+
+
+
+
+            <div class="testimony card col-md-6 mt-5 mb-5">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="100000">
+                  <div class="w-100 carousel-inner" role="listbox">
+
+                    <div class="carousel-item active">
+                      <div class="carousel-caption">
+                        <div class="row">
+                          <div class="col-sm-3">
+                            <img src="http://via.placeholder.com/200x200" alt="" class="rounded-circle img-fluid"/>
+                          </div>
+                          <div class="col-sm-9">
+                            <p><i class="fa fa-quote-left"></i>
+                                {{$testimonies->last()->message}}
+                                <i class="fa fa-quote-right"></i></p>
+                            <small class="smallest mute">-{{$testimonies->last()->title_of_client.' '.$testimonies->last()->name}}</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+                @foreach ($testimonies as $testimony)
+
+                    <div class="carousel-item">
+                      <div class="carousel-caption">
+                        <div class="row">
+                          <div class="col-sm-3">
+                          <img src="{{$testimony->image?$testimony->imageUrl:'http://via.placeholder.com/200x200'}}" alt="" class="rounded-circle img-fluid">
+                          </div>
+                          <div class="col-sm-9">
+                            <h3></h3>
+                            <p><i class="fa fa-quote-left"></i> {{$testimony->message}} <i class="fa fa-quote-right"></i></p>
+                            <small class="smallest mute">-{{$testimony->title_of_client.' '.$testimony->name}}</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                @endforeach
+
+                  </div>
+                  <div class="float-right navi">
+                  <a class="" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon ico" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon ico" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                  </div>
+                </div>
+              </div>
+
+
 
 
 
         </section>
+
+    @endif
+
       </div>
 
 

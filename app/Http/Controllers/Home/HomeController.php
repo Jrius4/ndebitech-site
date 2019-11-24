@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\ClientTestimony;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\QuoteRequest;
@@ -17,7 +18,8 @@ class HomeController extends Controller
     public function index()
     {
         $categories = ServiceCategory::get();
-        return view('home.landing-page.index', compact('categories'));
+        $testimonies = ClientTestimony::get();
+        return view('home.landing-page.index', compact('categories','testimonies'));
     }
 
 
