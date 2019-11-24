@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\ClientTestimony;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\NdebiTechClient;
 use App\QuoteRequest;
 use App\ServiceCategory;
 
@@ -19,7 +20,8 @@ class HomeController extends Controller
     {
         $categories = ServiceCategory::get();
         $testimonies = ClientTestimony::get();
-        return view('home.landing-page.index', compact('categories','testimonies'));
+        $clients = NdebiTechClient::get();
+        return view('home.landing-page.index', compact('categories','testimonies','clients'));
     }
 
 

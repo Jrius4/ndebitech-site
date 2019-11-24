@@ -154,7 +154,7 @@
                             </div>
 
                             <div class="col-md-6">
-                            <img class="img-fluid rounded" src="{{asset('/img/the-darkest-minds-1366x768-skylan-brooks-amandla-stenberg-harris-14876.jpg')}}" alt="image not found" width="540px" height="340px">
+                            <img class="img-fluid rounded" src="{{asset('/assets/images/a-group-of-professionals-sharing-ideas-3153207.jpg')}}" alt="image not found" width="540px" height="340px">
 
                             </div>
 
@@ -163,71 +163,6 @@
 
         </section>
 
-
-        <!-- Sale Section-->
-        {{-- <section class="sale">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <h2>Discover 2017 Sales</h2>
-                <p>lorem ipsum dolor sit amet consectetur adipiscing elit, ed do eiusmod tempor incididunt</p><a href="#" class="btn btn-dark shop-now">Shop Now</a>
-              </div>
-              <div class="col-md-6 d-none d-md-block">
-                <div class="product"><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/nikon-cam.png" alt="camera" class="img-fluid"></div>
-              </div>
-            </div>
-          </div>
-        </section> --}}
-        <!-- Lenses Section-->
-        {{-- <section class="product-2">
-          <div class="container">
-            <header>
-              <h2 class="h3 heading-line">Lenses Collection</h2>
-            </header>
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="item">
-                      <h4>Canon EOS C300</h4>
-                      <p class="text-primary">$1.299</p><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/lens-1.jpg" alt="lens" class="img-fluid">
-                      <div class="overlay d-flex align-items-center justify-content-center"><a href="detail.html" class="btn btn-unique">View Details</a></div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="item">
-                      <h4>Canon EOS C300</h4>
-                      <p class="text-primary">$1.299</p><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/lens-2.jpg" alt="lens" class="img-fluid">
-                      <div class="overlay d-flex align-items-center justify-content-center"><a href="detail.html" class="btn btn-unique">View Details</a></div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="item">
-                      <h4>Canon EOS C300</h4>
-                      <p class="text-primary">$1.299</p><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/lens-3.jpg" alt="lens" class="img-fluid">
-                      <div class="overlay d-flex align-items-center justify-content-center"><a href="detail.html" class="btn btn-unique">View Details</a></div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="item">
-                      <h4>Canon EOS C300</h4>
-                      <p class="text-primary">$1.299</p><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/lens-4.jpg" alt="lens" class="img-fluid">
-                      <div class="overlay d-flex align-items-center justify-content-center"><a href="detail.html" class="btn btn-unique">View Details</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 js-pull">
-                <div class="item item-big">
-                  <h2>
-
-                    Zoom <br>Lenses
-                  </h2><a href="category.html" class="btn btn-unique btn-lg">Shop Now</a><img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/lens-big.jpg" alt="lens" class="img-fluid">
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> --}}
         <!-- Divider Section-->
         <section class="divider-2 text-dark">
           <div class="container text-center">
@@ -238,36 +173,16 @@
                     The brands we partner with trust us, and we honour that trust by bringing their vision to life.
                 </p>
             <div class="row d-flex justify-content-around">
-                <span class="col-xs-3 p-2 bg-info m-1">span</span>
-                <span class="col-xs-3 p-2 bg-warning m-1">span</span>
-                <span class="col-xs-3 p-2 bg-primary m-1">span</span>
-                <span class="col-xs-3 p-2 bg-danger m-1">span</span>
-                <span class="col-xs-3 p-2 bg-success m-1">span</span>
-                <span class="col-xs-3 p-2 bg-info m-1">span</span>
-                <span class="col-xs-3 p-2 bg-warning m-1">span</span>
-                <span class="col-xs-3 p-2 bg-primary m-1">span</span>
-                <span class="col-xs-3 p-2 bg-danger m-1">span</span>
-                <span class="col-xs-3 p-2 bg-success m-1">span</span>
-                <span class="col-xs-3 p-2 bg-info m-1">span</span>
-                <span class="col-xs-3 p-2 bg-warning m-1">span</span>
-                <span class="col-xs-3 p-2 bg-primary m-1">span</span>
-                <span class="col-xs-3 p-2 bg-danger m-1">span</span>
-                <span class="col-xs-3 p-2 bg-success m-1">span</span>
-                <span class="col-xs-3 p-2 bg-info m-1">span</span>
-                <span class="col-xs-3 p-2 bg-warning m-1">span</span>
-                <span class="col-xs-3 p-2 bg-primary m-1">span</span>
-                <span class="col-xs-3 p-2 bg-danger m-1">span</span>
-                <span class="col-xs-3 p-2 bg-success m-1">span</span>
-                <span class="col-xs-3 p-2 bg-info m-1">span</span>
-                <span class="col-xs-3 p-2 bg-warning m-1">span</span>
-                <span class="col-xs-3 p-2 bg-primary m-1">span</span>
-                <span class="col-xs-3 p-2 bg-danger m-1">span</span>
-                <span class="col-xs-3 p-2 bg-success m-1">span</span>
-                <span class="col-xs-3 p-2 bg-info m-1">span</span>
-                <span class="col-xs-3 p-2 bg-warning m-1">span</span>
-                <span class="col-xs-3 p-2 bg-primary m-1">span</span>
-                <span class="col-xs-3 p-2 bg-danger m-1">span</span>
-                <span class="col-xs-3 p-2 bg-success m-1">span</span>
+                @if ($clients->count()>0)
+
+                @foreach ($clients as $client)
+                    <span class="col-xs-3 p-2 bg-transport m-1">
+                    <img src="{{$client->imageUrl}}" alt="{{$client->name}}">
+                    </span>
+                @endforeach
+                @endif
+
+
             </div>
           </div>
 

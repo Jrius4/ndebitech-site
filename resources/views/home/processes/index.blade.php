@@ -65,7 +65,7 @@
 <div class="image-box">
         <div
           class="image-box__background"
-          style="--image-url: url({{asset('/img/the-darkest-minds-1366x768-skylan-brooks-amandla-stenberg-harris-14876.jpg')}})"
+          style="--image-url: url({{asset('/assets/images/black-flat-screen-computer-monitor-1714208.jpg')}})"
         ></div>
         <div class="image-box__overlay"></div>
         <div class="image-box__content">
