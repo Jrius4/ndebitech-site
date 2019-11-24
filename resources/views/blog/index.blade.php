@@ -136,7 +136,7 @@
                 @endif
 
 
-                <nav>
+                <nav class="row d-flex justify-content-center">
                   {{ $posts->appends(request()->only(['term', 'month', 'year']))->links() }}
                 </nav>
             </div>

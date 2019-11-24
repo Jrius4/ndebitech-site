@@ -2,10 +2,10 @@
     <aside class="right-sidebar">
         <div class="search-widget">
             <form action="{{ route('blog') }}">
-                <div class="input-group">
+                <div class="input-group row">
                   <input type="text" class="form-control input-sm" value="{{ request('term') }}" name="term" placeholder="Search for...">
-                  <span class="input-group-append col-xs-3">
-                    <button class="btn btn-xs btn-default" type="submit">
+                  <span class="input-group-append col-xs-2">
+                    <button class="btn btn-primary btn-xs" type="submit">
                         <i class="fa fa-search"></i>
                     </button>
                   </span>

@@ -143,3 +143,11 @@ section.divider-2 p{font-weight:300}
     font-weight: bold;
 }
 
+.contact-card{
+    background-color:#dfdfdf;
+    color: black;
+}
+
+.contact-card h4{
+    color: dodgerblue;
+}

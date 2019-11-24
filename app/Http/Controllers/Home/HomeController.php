@@ -20,13 +20,14 @@ class HomeController extends Controller
         return view('home.landing-page.index', compact('categories'));
     }
 
-    public function contactUs()
-    {
-
-    }
 
     public function aboutUs()
     {
         return view('home.about-us.index');
+    }
+
+    public function contactUs()
+    {
+        return view('home.contact-us.index');
     }
 }

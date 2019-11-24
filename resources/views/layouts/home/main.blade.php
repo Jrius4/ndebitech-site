@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="{{asset('/assets/css/custom.css')}}">
 <link rel="stylesheet" href="{{asset('/css/custom.css')}}">
 <link rel="shortcut icon" href="{{asset('/img/logos/ndebi-tech-favi-blue.png')}}" type="image/x-icon">
+<link rel="stylesheet" href="{{asset('/vendor/plugins/ion-rangeslider/css/ion.rangeSlider.min.css')}}">
+<link rel="stylesheet" href="{{asset('/vendor/plugins/bootstrap-slider/css/bootstrap-slider.min.css')}}">
     <title>Ndebi tech</title>
 </head>
 <body class="">
@@ -23,7 +25,9 @@
 
         @include('home.modals.modal')
 
-            @yield('content')
+           <div>
+                @yield('content')
+           </div>
 
 
 
@@ -42,6 +46,74 @@
     <script src="{{asset('/assets/js/owl.carousel2.thumbs.min.js')}}"></script>
     <script src="{{asset('/assets/js/jquery.validate.min.js')}}"></script>
     <script src="{{asset('/assets/js/front.js')}}"></script>
+    <script src="{{asset('/vendor/plugins/ion-rangeslider/js/ion.rangeSlider.min.js')}}"></script>
+    <script src="{{asset('/vendor/plugins/bootstrap-slider/bootstrap-slider.min.js')}}"></script>
+    <script>
+            $(function () {
+              /* BOOTSTRAP SLIDER */
+              $('.slider').bootstrapSlider()
+
+              /* ION SLIDER */
+              $('#budget').ionRangeSlider({
+                min     : 0,
+                max     : 15000,
+                from    : 6500,
+                to      : 13500,
+                type    : 'double',
+                step    : 1,
+                prefix  : '$',
+                prettify: false,
+                hasGrid : true
+              })
+              $('#range_2').ionRangeSlider()
+
+              $('#range_5').ionRangeSlider({
+                min     : 0,
+                max     : 10,
+                type    : 'single',
+                step    : 0.1,
+                postfix : ' mm',
+                prettify: false,
+                hasGrid : true
+              })
+              $('#range_6').ionRangeSlider({
+                min     : -50,
+                max     : 50,
+                from    : 0,
+                type    : 'single',
+                step    : 1,
+                postfix : '°',
+                prettify: false,
+                hasGrid : true
+              })
+
+              $('#range_4').ionRangeSlider({
+                type      : 'single',
+                step      : 100,
+                postfix   : ' light years',
+                from      : 55000,
+                hideMinMax: true,
+                hideFromTo: false
+              })
+              $('#range_3').ionRangeSlider({
+                type    : 'double',
+                postfix : ' miles',
+                step    : 10000,
+                from    : 25000000,
+                to      : 35000000,
+                onChange: function (obj) {
+                  var t = ''
+                  for (var prop in obj) {
+                    t += prop + ': ' + obj[prop] + '\r\n'
+                  }
+                  $('#result').html(t)
+                },
+                onLoad  : function (obj) {
+                  //
+                }
+              })
+            })
+          </script>
 
 
 </body>
