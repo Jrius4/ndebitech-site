@@ -103,7 +103,7 @@
 
                 @foreach ($clients as $client)
                     <span class="col-xs-3 p-2 bg-transport m-1">
-                    <img height="75" width="75" src="{{$client->imageUrl}}" alt="{{$client->name}}">
+                    <img height="75" style="max-width:150px" src="{{$client->imageUrl}}" alt="{{$client->name}}">
                     </span>
                 @endforeach
                 @endif
