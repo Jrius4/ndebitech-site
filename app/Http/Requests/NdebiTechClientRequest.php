@@ -24,7 +24,7 @@ class NdebiTechClientRequest extends Request
     public function rules()
     {
         $rules = [
-            'logo'        => 'required|mimes:jpg,jpeg,bmp,png',
+            'logo'        => 'required|mimes:jpg,jpeg,bmp,png,svg',
         ];
 
         return $rules;
