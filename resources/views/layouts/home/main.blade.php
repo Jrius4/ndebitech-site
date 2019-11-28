@@ -60,11 +60,12 @@
                 from    : 6500,
                 to      : 13500,
                 type    : 'double',
-                step    : 1,
+                step    : 0.1,
                 prefix  : '$',
-                prettify: false,
+                prettify: true,
                 hasGrid : true
-              })
+              }).replace(/;/g, '-between-');
+
               $('#range_2').ionRangeSlider()
 
               $('#range_5').ionRangeSlider({

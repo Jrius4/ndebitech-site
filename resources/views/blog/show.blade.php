@@ -2,7 +2,7 @@
 
 @section('content')
 
-<header class="mt-0 pt-0" style="margin-top:-200px">
+<header class="mt-0 pt-0 container-fluid" style="margin-top:-200px;background:{{false?null:'radial-gradient(circle, rgba(28,41,223,0.8799719716988358) 0%, rgba(5,96,203,1) 100%);'}}">
         <div style="background:{{false?null:'radial-gradient(circle, rgba(28,41,223,0.8799719716988358) 0%, rgba(5,96,203,1) 100%);'}} min-height:250px;min-width:100%;margin-top:-20px">
                 <img src="" alt="">
                 <div class="row d-flex justify-content-center">

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\FieldIndustry;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -18,5 +19,10 @@ class QuoteRequest extends Model
     'budget',
     'time_done',
     'field_industry_id'];
+
+    public function fieldIndustry()
+    {
+        return $this->belongsTo(FieldIndustry::class);
+    }
 
 }

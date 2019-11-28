@@ -199,3 +199,7 @@ section.divider-2 p{font-weight:300}
  a:hover > .ico {
       background-color: #666;
   }
+
+  .img-smallify{
+    transform: scale(0.65);
+}
