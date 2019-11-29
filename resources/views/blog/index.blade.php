@@ -18,7 +18,7 @@
     <div class="container my-3">
         <ol class="breadcrumb">
           <li class="breadcrumb-item text-uppercase"> <a href="{{url('/')}}" class="text-primary">Home</a></li>
-          <li class="breadcrumb-item active text-uppercase"><a href="{{url('/blog')}}" class="text-primary">Blog</a></li>
+          <li class="breadcrumb-item active text-uppercase"><a href="{{url('/blog')}}" class="text-primary">News</a></li>
         </ol>
     </div>
     <div class="container">

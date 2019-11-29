@@ -42,8 +42,7 @@
                                 <img src="{{$category->imageUrl}}" alt=""
                                     class="img-fluid rounded-circle" width="100px" height="150px">
                                @else
-                               <img src="https://d19m59y37dris4.cloudfront.net/photo/1-4-1/img/blog-avatar.jpg" alt=""
-                               class="img-fluid rounded-circle" width="150px" height="150px">
+                               {{null}}
 
                                @endif
 
