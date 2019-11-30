@@ -1,7 +1,7 @@
 
-    <div class="home-page bg-light" style="margin-top:-20px;">
+    <div class="home-page" style="margin-top:-20px;">
         <!-- Hero Section -->
-        <section class="hero d-flex flex-row align-items-center">
+        <section class="hero2 d-flex flex-row align-items-center">
           <div class="container">
             <div data-slider-id="1" class="owl-carousel hero-1-slider">
               <!-- Slide-->
