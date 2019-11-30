@@ -1,20 +1,7 @@
     {{-- <!-- Top Bar --> --}}
 
 
-    <div class="top-bar d-none d-sm-block">
-            <div class="container">
-              <div class="row">
 
-                <div class="ml-auto col-sm-3 col-md-3 text-right account-details">
-                  <ul class="list-inline">
-                    <li class="list-inline-item"> <a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                    <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
 
 
 
@@ -22,7 +9,7 @@
 
 
 
-          <nav class="navbar navbar-expand-lg px-lg-0 bg-light navbar-light">
+          <nav class="navbar navbar-expand-lg px-lg-0  navbar-light bg-light sticky-top">
             <div class="container position-relative">
               {{-- <!-- Navbar Brand--> --}}
               <a href="{{url('/')}}" class="navbar-brand"> <img width="35" height="35" src="{{asset('/img/logos/ndebi-tech-favi-blue.png')}}" alt="logo"></a>
@@ -44,7 +31,7 @@
                     <ul class="list-inline">
                     <li class="list-inline-item">
                             {{-- <button type="button" class="btn btn-white btn-quote" >GEt A QUOTE</button> --}}
-                            <button id="navbarCategory" class="nav-link text-center btn btn-white btn-quote"
+                            <button id="navbarCategory" class="nav-link text-center btn btn-unique btn-quote"
                             data-toggle="modal" data-target="#myModal">GET QUOTE</button>
                     </li>
 

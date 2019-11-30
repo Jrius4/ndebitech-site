@@ -16,13 +16,13 @@
         </div>
     </div>
 
-
+{{-- 
         <div class="container my-3">
             <ol class="breadcrumb">
               <li class="breadcrumb-item text-uppercase"> <a href="{{url('/')}}" class="text-primary">Home</a></li>
               <li class="breadcrumb-item active text-uppercase"><a href="{{url('/careers')}}" class="text-primary">Careers</a></li>
             </ol>
-        </div>
+        </div> --}}
 
         <div class="row container-fluid justify-content-center">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">

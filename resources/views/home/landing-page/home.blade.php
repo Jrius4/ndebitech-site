@@ -36,11 +36,11 @@
 
 
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-2">
-                        <div class="card-service justify-content-center shadow-md">
+                        <div class="card-service justify-content-center shadow-md py-2">
                             <div class="card-block">
                                @if ($category->image)
                                 <img src="{{$category->imageUrl}}" alt=""
-                                    class="img-fluid rounded-circle" width="100px" height="150px">
+                                    class="img-fluid" width="100px" height="150px">
                                @else
                                {{null}}
 
