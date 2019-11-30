@@ -19,31 +19,33 @@
 
 
 
-<header class="my-2 p-2">
-    <div class="container text-center">
-        <h2 class="justify-content-center">Process</h2>
-        <div>
+<header class="my-2 container-fluid">
+    <div class="row d-flex justify-content-around  text-center">
+
+        <div class="col-md-8">
+            <h2 class="text-primary">Process</h2>
             <p>
               We create engagement between your brand and real people by blending creativity with technology. Experience as they should be: <br>
               <strong>bold, beautiful and immersive.</strong>
             </p>
         </div>
 
-       <div class="row justify-content-center">
-         <div class="col-sm-3">
-         <img src="{{asset('img/icons/strategy.svg')}}" alt="imge not found" width="100px" height="100px" id="img-fluid">
-           <h5 class="mt-2">STRATEGY</h5>
-         </div>
+        <div class="row d-flex justify-content-center col-xl-12">
+            <div class="col-sm-3">
+            <img src="{{asset('img/icons/strategy.svg')}}" alt="imge not found" width="100px" height="100px" id="img-fluid">
+            <h5 class="mt-2">STRATEGY</h5>
+            </div>
 
-         <div class="col-sm-3">
-           <img src="{{asset('img/icons/sketch.svg')}}" alt="imge not found" width="100px" height="100px" id="img-fluid">
-           <h5 class="mt-2">DESIGN</h5>
-         </div>
+            <div class="col-sm-3">
+            <img src="{{asset('img/icons/sketch.svg')}}" alt="imge not found" width="100px" height="100px" id="img-fluid">
+            <h5 class="mt-2">DESIGN</h5>
+            </div>
 
-         <div class="col-sm-3">
-           <img src="{{asset('img/icons/computer.svg')}}" alt="imge not found" width="100px" height="100px" id="img-fluid">
-           <h5 class="mt-2">Development</h5>
-         </div>
+            <div class="col-sm-3">
+            <img src="{{asset('img/icons/computer.svg')}}" alt="imge not found" width="100px" height="100px" id="img-fluid">
+            <h5 class="mt-2">Development</h5>
+            </div>
+        </div>
 
     </div>
 

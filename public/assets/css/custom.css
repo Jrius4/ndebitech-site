@@ -203,3 +203,6 @@ section.divider-2 p{font-weight:300}
 .main-footer hr{
     border: #2793f8ed solid 1px;
 }
+.logo-navbar{
+    transform: scale(0.65);
+}
