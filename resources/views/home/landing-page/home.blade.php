@@ -1,18 +1,21 @@
 
     <div class="home-page" style="margin-top:-20px;">
         <!-- Hero Section -->
-        <section class="hero2 d-flex flex-row align-items-center">
+        <section style="padding-top:8px !important" class="hero2 d-flex flex-row align-items-center">
           <div class="container">
             <div data-slider-id="1" class="owl-carousel hero-1-slider">
               <!-- Slide-->
               <div class="item">
-                <div class="row d-flex flex-row align-items-center py-3">
+                <div class="row d-flex">
                   <div class="col-md-6 head-text">
                     <p style="font-size:3.4em">We&nbsp;Build <strong>Experience</strong>
                     that <strong>Engage</strong></p>
 
                     <p style="font-size:1.8em">
                         People are the core of our business, how they use and internet with our products is the measure of our success. We put them
+                    </p>
+                    <p>
+                        <a href="#services" class="text-light row d-flex justify-content-around" style="max-width:188px"><i><img class="img-fluid" style="height:45px;width:35px" src="/images/imgs/Group 99@3x.png" alt=""></i> <span><strong>Scroll down</strong></span></a>
                     </p>
 
 
@@ -26,7 +29,7 @@
           </div>
         </section>
 
-        <section class="bg-dark w-100 m-auto service row justify-content-center text-center py-3">
+        <section id="services" class="bg-dark w-100 m-auto service row justify-content-center text-center py-3">
             <div class="col-12 text-center text-light my-3">
                 <h1>Our Services</h1>
             </div>
@@ -79,7 +82,7 @@
                             </div>
 
                             <div class="col-md-6">
-                            <img class="img-fluid rounded" src="{{asset('/assets/images/a-group-of-professionals-sharing-ideas-3153207.jpg')}}" alt="image not found" width="540px" height="340px">
+                            <img class="img-fluid rounded" src="{{asset('/images/imgs/nesa-by-makers-736784-unsplash@3x.jpg')}}" alt="image not found" width="540px" height="340px">
 
                             </div>
 
