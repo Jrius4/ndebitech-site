@@ -209,7 +209,7 @@ section.divider-2 p{font-weight:300}
 
 
 section.hero2{background-image:linear-gradient(-18deg, rgb(55, 121, 195) 0%, rgb(35, 104, 145) 100%);position:relative;color:#fff;}
-section.hero2::before{content:'';display:block;height:100%;width:100%;position:absolute;top:0;right:0;background:url(../../images/imgs/aleks-dorohovich-nJdwUHmaY8A-unsplash.jpg) fixed;background-size:cover;background-position:center center;opacity:0.2}
+section.hero2::before{content:'';display:block;height:100%;width:100%;position:absolute;top:0;right:0;background:url(../../images/imgs/daria-shevtsova-zbWFT4eVopE-unsplash.jpg) fixed;background-size:cover;background-position:center center;opacity:0.2}
 section.hero2 .container{position:relative}
 section.hero2 h2{text-shadow:1px 1px 1px rgba(0,0,0,0.2)}
 section.hero2 p.h5{font-weight:300;font-family:"Roboto",sans-serif}
