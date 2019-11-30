@@ -92,7 +92,7 @@
         <section class="divider-2 text-dark">
           <div class="container text-center">
             <h2>Some of our friends</h2>
-            <hr class="bg-primary">
+            {{-- <hr class="bg-primary"> --}}
             <p style="font-size:1.2em" >
                     Much of our work is through reputation and referral.We build lasting business relationships. <br>
                     The brands we partner with trust us, and we honour that trust by bringing their vision to life.
