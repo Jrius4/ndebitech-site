@@ -1,3 +1,4 @@
+<span style="display:none">{!!$new_page=1!!}</span>
 @extends('layouts.home.main')
 
 @section('content')
@@ -8,7 +9,7 @@
 
                 <div class="col-md-6 text-light py-5">
                     <h3>Contact Us</h3>
-                   
+
 
                 </div>
 

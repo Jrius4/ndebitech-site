@@ -9,10 +9,17 @@
 
 
 
-          <nav class="navbar navbar-expand-lg px-lg-0  navbar-light bg-light sticky-top">
+          <nav class="navbar navbar-expand-lg px-lg-0 {{$new_page%2==0?'navbar-light bg-light':'navbar-dark bg-primary'}}   sticky-top">
             <div class="container position-relative">
               {{-- <!-- Navbar Brand--> --}}
-              <a href="{{url('/')}}" class="navbar-brand"> <img class="logo-navbar" src="{{asset('/img/logos/Group 2.png')}}" alt="logo"></a>
+              <a href="{{url('/')}}" class="navbar-brand">
+                @if ($new_page%2==0)
+                <img class="logo-navbar" src="{{asset('/img/logos/Group 2.png')}}" alt="logo">
+                @else
+                <img class="logo-navbar" src="{{asset('/img/logos/Group 2.png')}}" alt="logo">
+                @endif
+
+            </a>
               {{-- <!-- Toggle Button--> --}}
               <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu <i class="fa fa-bars"></i></button>
               {{-- <!-- Navbar Menu--> --}}

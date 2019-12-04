@@ -17,7 +17,8 @@
 <link rel="shortcut icon" href="{{asset('/img/logos/ndebi-tech-favi-blue.png')}}" type="image/x-icon">
 <link rel="stylesheet" href="{{asset('/vendor/plugins/ion-rangeslider/css/ion.rangeSlider.css')}}">
 <link rel="stylesheet" href="{{asset('/vendor/plugins/bootstrap-slider/css/bootstrap-slider.min.css')}}">
-<link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+{{-- <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet"> --}}
+<link rel="stylesheet" href="{{asset('/assets/webfonts/maven-pro/style.css')}}">
     <title>Ndebi tech</title>
 </head>
 <body class="">

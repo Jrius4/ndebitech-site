@@ -1,3 +1,4 @@
+<span style="display:none">{!!$new_page=0!!}</span>
 @extends('layouts.home.main')
 
 @section('content')
@@ -15,7 +16,7 @@
 
     </div>
 </div>
-{{-- 
+{{--
 <div class="container my-3">
     <ol class="breadcrumb">
         <li class="breadcrumb-item text-uppercase">

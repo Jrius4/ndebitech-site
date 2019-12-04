@@ -1,3 +1,4 @@
+<span style="display:none">{!!$new_page=1!!}</span>
 @extends('layouts.home.main')
 
 @section('content')
@@ -18,7 +19,7 @@
         </div>
     </div>
 
- 
+
 
     <div class="container">
         <div style="margin-top:-20px" class="bg-light p-3 card">

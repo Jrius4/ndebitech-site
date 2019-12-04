@@ -1,3 +1,4 @@
+<span style="display:none">{!!$new_page=1!!}</span>
 @extends('layouts.home.main')
 
 @section('content')
@@ -19,7 +20,7 @@
 </div>
 
     <div class="my-4"></div>
-    
+
 
         <div class="row d-flex justify-content-space container-fluid">
 
