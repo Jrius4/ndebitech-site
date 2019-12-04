@@ -1,4 +1,5 @@
 <span style="display:none">{!!$new_page=0!!}</span>
+<span style="display:none">{!!$new_page_active='about-us'!!}</span>
 @extends('layouts.home.main')
 
 @section('content')

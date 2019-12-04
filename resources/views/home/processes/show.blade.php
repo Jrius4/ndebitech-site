@@ -1,4 +1,5 @@
 <span style="display:none">{!!$new_page=1!!}</span>
+<span style="display:none">{!!$new_page_active='processes'!!}</span>
 @extends('layouts.home.main')
 
 @section('content')

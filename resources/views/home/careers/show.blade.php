@@ -1,3 +1,4 @@
+<span style="display:none">{!!$new_page_active='careers'!!}</span>
 <span style="display:none">{!!$new_page=1!!}</span>
 @extends('layouts.home.main')
 
