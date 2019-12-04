@@ -1,6 +1,5 @@
-<span style="display:none">{!!$new_page_active='home'!!}</span>
-<span style="display:none">{!!$new_page=0!!}</span>
-@extends('layouts.home.main')
+
+@extends('home.landing-page.layout')
 @section('content')
   @include('home.landing-page.home')
 @endsection

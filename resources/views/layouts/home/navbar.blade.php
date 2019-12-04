@@ -9,7 +9,7 @@
 
 
 
-          <nav class="navbar navbar-expand-lg px-lg-0 {{$new_page%2==0?'navbar-light bg-light main-navbar-light':'navbar-dark bg-primary main-navbar-blue'}}   sticky-top">
+          <nav class="navbar navbar-expand-lg px-lg-0 main-navbar-normal {{$new_page%2==0?'navbar-light bg-light main-navbar-light':'navbar-dark bg-primary main-navbar-blue'}}   sticky-top">
             <div class="container position-relative">
               {{-- <!-- Navbar Brand--> --}}
               <a href="{{url('/')}}" class="navbar-brand">

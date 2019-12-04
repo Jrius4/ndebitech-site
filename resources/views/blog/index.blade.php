@@ -1,6 +1,6 @@
 <span style="display:none">{!!$new_page_active='blog'!!}</span>
 <span style="display:none">{!!$new_page=1!!}</span>
-@extends('layouts.home.main')
+@extends('blog.layout')
 
 @section('content')
     <header class="mt-0 pt-0 container-fluid" style="margin-top:-200px;background:{{false?null:'radial-gradient(circle, rgba(28,41,223,0.8799719716988358) 0%, rgba(5,96,203,1) 100%);'}}">

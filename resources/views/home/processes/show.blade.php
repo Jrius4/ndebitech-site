@@ -1,6 +1,5 @@
-<span style="display:none">{!!$new_page=1!!}</span>
-<span style="display:none">{!!$new_page_active='processes'!!}</span>
-@extends('layouts.home.main')
+
+@extends('home.processes.layout')
 
 @section('content')
 

@@ -1,6 +1,4 @@
-<span style="display:none">{!!$new_page_active='careers'!!}</span>
-<span style="display:none">{!!$new_page=0!!}</span>
-@extends('layouts.home.main')
+@extends('home.careers.layout')
 
 @section('content')
 

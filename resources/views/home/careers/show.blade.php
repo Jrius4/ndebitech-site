@@ -1,6 +1,5 @@
-<span style="display:none">{!!$new_page_active='careers'!!}</span>
-<span style="display:none">{!!$new_page=1!!}</span>
-@extends('layouts.home.main')
+
+@extends('home.careers.layout')
 
 @section('content')
 <div class="mt-0 pt-0 container-fluid" style="margin-top:-200px;background:{{false?null:'radial-gradient(circle, rgba(28,41,223,0.8799719716988358) 0%, rgba(5,96,203,1) 100%);'}} ">

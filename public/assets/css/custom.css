@@ -1,9 +1,9 @@
 .image-header{
     transform: scale(0.75);
 }
-
-@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
 /*
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+
 
 .home-page2{
 
@@ -119,6 +119,9 @@ small {
     border-bottom: #006db6 3px solid;
     color:#006db6;
     font-weight: bold;
+}
+.main-navbar-blue{
+    background: #006db6 !important;
 }
 .main-navbar-blue .active{
     border-bottom: #ffffff 3px solid;

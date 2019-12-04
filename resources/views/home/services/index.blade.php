@@ -1,5 +1,5 @@
-<span style="display:none">{!!$new_page=1!!}</span>
-@extends('layouts.home.main')
+
+@extends('home.services.layout')
 
 @section('content')
 

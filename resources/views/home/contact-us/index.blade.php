@@ -1,6 +1,5 @@
-<span style="display:none">{!!$new_page_active='contact-us'!!}</span>
-<span style="display:none">{!!$new_page=1!!}</span>
-@extends('layouts.home.main')
+
+@extends('home.contact-us.layout')
 
 @section('content')
 
