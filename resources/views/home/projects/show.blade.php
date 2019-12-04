@@ -1,4 +1,5 @@
-@extends('layouts.home.main')
+
+@extends('home.projects.layout')
 
 @section('content')
 

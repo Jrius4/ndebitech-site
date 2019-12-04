@@ -24,7 +24,7 @@
 <body class="">
 
 
-        @include('layouts.home.navbar')
+        @include('home.processes.navbar')
 
         @include('home.modals.modal')
 

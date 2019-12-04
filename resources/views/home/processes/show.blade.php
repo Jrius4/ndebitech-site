@@ -1,4 +1,5 @@
-@extends('layouts.home.main')
+
+@extends('home.processes.layout')
 
 @section('content')
 
@@ -18,7 +19,7 @@
         </div>
     </div>
 
- 
+
 
     <div class="container">
         <div style="margin-top:-20px" class="bg-light p-3 card">

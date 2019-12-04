@@ -8,8 +8,8 @@
               <div class="item">
                 <div class="row d-flex">
                   <div class="col-md-6 head-text">
-                    <p style="font-size:3.4em">We&nbsp;Build <strong>Experience</strong>
-                    that <strong>Engage</strong></p>
+                    <p style="font-size:3em">We&nbsp;Build <strong style="font-weight:900;">Experience</strong>
+                    that <strong style="font-weight:900">Engage</strong></p>
 
                     <p style="font-size:1.8em">
                         People are the core of our business, how they use and internet with our products is the measure of our success. We put them
@@ -129,7 +129,7 @@
                   </p>
                   <form>
                     <input class="bg-light" id="email" type="email" name="email" placeholder="Enter your email address">
-                    <input type="submit" value="Subscribe" class="btn btn-unique">
+                    <input type="submit" value="Subscribe" class="btn btn-unique btn-quote">
                   </form>
                 </div>
                 <div class="social">

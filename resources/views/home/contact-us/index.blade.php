@@ -1,4 +1,5 @@
-@extends('layouts.home.main')
+
+@extends('home.contact-us.layout')
 
 @section('content')
 
@@ -8,7 +9,7 @@
 
                 <div class="col-md-6 text-light py-5">
                     <h3>Contact Us</h3>
-                   
+
 
                 </div>
 

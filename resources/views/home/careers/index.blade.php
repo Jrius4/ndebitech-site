@@ -1,4 +1,4 @@
-@extends('layouts.home.main')
+@extends('home.careers.layout')
 
 @section('content')
 
@@ -15,7 +15,7 @@
 
     </div>
 </div>
-{{-- 
+{{--
 <div class="container my-3">
     <ol class="breadcrumb">
         <li class="breadcrumb-item text-uppercase">
