@@ -129,7 +129,7 @@
                   </p>
                   <form>
                     <input class="bg-light" id="email" type="email" name="email" placeholder="Enter your email address">
-                    <input type="submit" value="Subscribe" class="btn btn-unique">
+                    <input type="submit" value="Subscribe" class="btn btn-unique btn-quote">
                   </form>
                 </div>
                 <div class="social">
